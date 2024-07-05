@@ -1,0 +1,115 @@
+"ID","Title","ShortTitle","Identifier","Summary","Modified","ReasonDelivery","ExplanatoryText","Language","Catalog","Frequency","Period","ShortDescription","Description","DefaultPresentation","DefaultSelection","GraphTypes","OutputStatus","Source","MetaDataModified","SearchPriority"
+0,"Kerncijfers wijken en buurten 2023","Kerncijfers wijken en buurten 2023","85618NED","Kerncijfers over demografische en sociaal-economische kenmerken
+Uitgesplitst naar gemeenten, wijken en buurten","2024-03-15T02:00:00","ActualiseringBijzonder","","nl","CBS","Onregelmatig","2023","
+Overzicht van statistische gegevens van gemeenten, wijken en buurten in Nederland. 
+
+Gegevens beschikbaar over: 2023.
+
+Status van de cijfers:
+Definitief, tenzij in de toelichting bij het onderwerp expliciet is vermeld dat het voorlopige cijfers betreft.
+
+Wijzigingen per maart 2024
+Binnen het thema Bedrijfsvestigingen zijn cijfers toegevoegd.
+
+Wijzigingen per oktober 2023
+Binnen het thema Bevolking zijn cijfers toegevoegd over herkomst. Ten opzichte van eerdere jaargangen van de tabel Kerncijfers wijken en buurten is het onderwerp ‘Personen met een migratieachtergrond’ vervangen door ‘Bevolking naar herkomst’. Het CBS gaat over op een nieuwe indeling van de bevolking naar herkomst. Voortaan is meer bepalend waar iemand zelf geboren is, en minder bepalend waar iemands ouders geboren zijn. Daarbij wordt het woord migratieachtergrond niet meer gebruikt. De hoofdindeling westers/niet-westers wordt vervangen door een indeling op basis van werelddelen en veelvoorkomende immigratielanden. Deze indeling wordt geleidelijk ingevoerd in tabellen en publicaties met bevolking naar herkomst.
+
+Wanneer komen er nieuwe cijfers?
+Elk kwartaal worden er nieuwe cijfers toegevoegd indien deze beschikbaar zijn.
+
+","INHOUDSOPGAVE
+
+1. Toelichting
+2. Definities en verklaring van symbolen
+3. Koppelingen naar relevante tabellen en artikelen
+4. Bronnen en methoden
+5. Meer informatie 
+
+
+1. TOELICHTING
+
+Overzicht van statistische gegevens van gemeenten, wijken en buurten in Nederland. 
+
+Gegevens beschikbaar over: 2023.
+
+Status van de cijfers:
+Definitief, tenzij in de toelichting bij het onderwerp expliciet is vermeld dat het voorlopige cijfers betreft.
+
+Wijzigingen per maart 2024
+Binnen het thema Bedrijfsvestigingen zijn cijfers toegevoegd.
+
+Wijzigingen per oktober 2023
+Binnen het thema Bevolking zijn cijfers toegevoegd over herkomst. Ten opzichte van eerdere jaargangen van de tabel Kerncijfers wijken en buurten is het onderwerp ‘Personen met een migratieachtergrond’ vervangen door ‘Bevolking naar herkomst’. Het CBS gaat over op een nieuwe indeling van de bevolking naar herkomst. Voortaan is meer bepalend waar iemand zelf geboren is, en minder bepalend waar iemands ouders geboren zijn. Daarbij wordt het woord migratieachtergrond niet meer gebruikt. De hoofdindeling westers/niet-westers wordt vervangen door een indeling op basis van werelddelen en veelvoorkomende immigratielanden. Deze indeling wordt geleidelijk ingevoerd in tabellen en publicaties met bevolking naar herkomst.
+
+Wanneer komen er nieuwe cijfers?
+Elk kwartaal worden er nieuwe cijfers toegevoegd indien deze beschikbaar zijn.
+
+
+2. DEFINITIES EN VERKLARING VAN SYMBOLEN
+
+Definities:
+
+Regio:
+De gemeenten in Nederland zijn onderverdeeld in wijken en buurten. Buurten vormen het laagste regionale niveau. Wijken zijn optellingen van één of meer aaneengesloten buurten. De gemeente bepaalt zelf de indeling in wijken en buurten. Het CBS coördineert landelijk deze indeling.
+
+Wijk:
+Onderdeel van een gemeente, bestaande uit één of meerdere buurten. Vaak komt een wijk overeen met een woonplaats of een deel van een grotere woonplaats.
+Omdat gemeente Amsterdam met ingang van statistiekjaar 2023 meer dan 100 wijken telt, heeft deze gemeente letters ingevoerd in haar wijkcodes. Elke wijk in een gemeente en elke buurt binnen een wijk heeft een code van 2 karakters. Tot voor kort bestonden deze wijk- en buurtcodes in alle gemeenten uit 2 cijfers: hiermee zijn 100 combinaties mogelijk (00 t/m 99). De wijkcode en/of buurtcode mogen - indien nodig - ook letters bevatten, zodat meer combinaties mogelijk worden.
+
+Buurt:
+Onderdeel van een wijk, die vanuit bebouwingsoogpunt of sociaaleconomische structuur homogeen is afgebakend. Homogeen wil zeggen dat één functie dominant is, bijvoorbeeld woonfunctie (woongebied), werkfunctie (industriegebied) of recreatieve functie (natuurgebied). Functies kunnen echter ook gemengd voorkomen.
+
+Verklaring van symbolen:
+
+niets (blanco)	: het cijfer kan op logische gronden niet voorkomen
+. 		: het cijfer is onbekend, onvoldoende betrouwbaar of geheim
+*		: voorlopige cijfers
+**		: nader voorlopige cijfers
+
+
+3. KOPPELINGEN NAAR RELEVANTE TABELLEN EN ARTIKELEN
+
+Relevante tabellen:
+
+Meer cijfers over wijken en buurten zijn te vinden in de StatLinetabellen:
+<a href='https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/thema?themaNr=52010'>Recente tabellen Kerncijfers wijken en buurten</a> 
+<a href='https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/thema?themaNr=81942'>Gearchiveerde tabellen Kerncijfers wijken en buurten</a>
+
+Data uit bovengenoemde StatLinetabellen zijn ook als <a href='https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/wijk-en-buurtstatistieken'>Excelbestand</a> beschikbaar.
+
+Wijk- en buurtcijfers per thema op StatLine:
+<a href='https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/thema?themaNr=82400'>Energie</a>
+<a href='https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/thema?themaNr=83370'>Opleidingsniveau</a>
+<a href='https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/thema?themaNr=84898'>Sociale Zekerheid</a>
+<a href='https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/thema?themaNr=52240'>Zorg</a>
+<a href='https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/thema?themaNr=80314'>Nabijheid voorzieningen</a>
+<a href='https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/thema?themaNr=52000'>Bodemgebruik</a>
+
+Overige publicaties met regionale kerncijfers:
+<a href='https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/cijfers-op-de-kaart'>Cijfers op de kaart</a>
+<a href='https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/cartografische-toegang/geoservices-bij-het-cbs'>Geoservices bij het CBS</a>
+<a href='https://opendata.cbs.nl/#/CBS/nl/dataset/70072ned/table?dl=40544'>Regionale kerncijfers Nederland</a>
+
+Relevant artikel:
+<a href='https://www.cbs.nl/nl-nl/longread/statistische-trends/2022/nieuwe-indeling-bevolking-naar-herkomst'>Nieuwe indeling bevolking naar herkomst</a> 
+
+De wijk- en buurtkaart bevat de digitale geometrie van de grenzen van de buurten, wijken en gemeenten en wordt <a href='https://www.cbs.nl/nl-nl/reeksen/geografische-data'>op de CBS-website</a>  en op <a href='https://www.pdok.nl/'>pdok.nl</a> beschikbaar gesteld. 
+
+Het CBS geeft elk kwartaal een <a href='https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/gemeente/nieuwsbrief-regionaal'>Nieuwsbrief Regionaal</a> uit, waarin een overzicht wordt gegeven van de nieuwste cijfers en publicaties op lokaal niveau en overige ontwikkelingen op het gebied van regionale en ruimtelijke statistieken. Hierop kunt u zich abonneren via de volgende link <a href='https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/gemeente/nieuwsbrief-regionaal'>Nieuwsbrief Regionaal</a>.
+
+Meer informatie is te vinden op de themapagina <a href='https://www.cbs.nl/nl-nl/dossier/nederland-regionaal'>Nederland regionaal</a>.
+
+
+4. BRONNEN EN METHODEN
+
+De onderzoeksmethode van deze tabel is te vinden in de onderzoeksbeschrijving: <a href='https://www.cbs.nl/nl-nl/onze-diensten/methoden/onderzoeksomschrijvingen/korte-onderzoeksbeschrijvingen/kerncijfers-wijken-en-buurten'>Kerncijfers Wijken en Buurten</a>.
+
+De oppervlaktes land en water per regio zijn bepaald door het combineren van het meest recente Bestand Bodemgebruik (BBG) met het digitale bestand van gemeente-, wijk- en buurtgrenzen. Bij de productie van een nieuwe BBG-editie worden geconstateerde fouten en verbeterde interpretaties op basis van nieuwe bronnen bij eerdere BBG-edities vastgesteld (gecorrigeerd bodemgebruik). Na publicatie van een nieuw BBG worden de arealen land en water per regio voor eerdere verslagjaren van Kerncijfers wijken en buurten (KWB) echter niet herzien. Zie de definities van ‘oppervlakte land’ en ‘oppervlakte water’ voor de toegepaste BBG-edities per verslagjaar van de KWB. Zie de webpagina <a href='https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/geografische-data/natuur-en-milieu/bestand-bodemgebruik'>Bestand Bodemgebruik</a> voor een nadere toelichting op gecorrigeerd bodemgebruik en beschikbare publicaties.
+
+
+5. MEER INFORMATIE
+
+<a href='https://www.cbs.nl/nl-nl/over-ons/contact/infoservice'>Infoservice</a> 
+
+Copyright © Centraal Bureau voor de Statistiek, Den Haag/Heerlen 
+Verveelvoudiging is toegestaan, mits het CBS als bron wordt vermeld.","ts=1709647904802&graphtype=Table&r=Topics&k=WijkenEnBuurten&_gu=WK","$filter=((WijkenEnBuurten eq 'NL00      ') or (WijkenEnBuurten eq 'GM1680    ') or (WijkenEnBuurten eq 'WK168000  ') or (WijkenEnBuurten eq 'BU16800000') or (WijkenEnBuurten eq 'GM0358    ') or (WijkenEnBuurten eq 'WK035800  ') or (WijkenEnBuurten eq 'BU03580000'))","Table,Map","Regulier","CBS.","2024-03-15T02:00:00","2"

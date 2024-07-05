@@ -1,0 +1,629 @@
+"odata.type","ID","Position","ParentID","Type","Key","Title","Description","MapYear","Datatype","Unit","Decimals","Default","PresentationType"
+"Cbs.OData.GeoDetail",0,0,,"GeoDetail","WijkenEnBuurten","Wijken en buurten","",2023,,,,,
+"Cbs.OData.TopicGroup",1,,,"TopicGroup","","Regioaanduiding","De gemeenten in Nederland zijn onderverdeeld in wijken en buurten. Buurten vormen het laagste regionale niveau. Wijken zijn optellingen van één of meer aaneengesloten buurten. De gemeente bepaalt zelf de indeling in wijken en buurten. Het CBS coördineert landelijk deze indeling.
+
+Wijk:
+Onderdeel van een gemeente, bestaande uit één of meerdere buurten. Vaak komt een wijk overeen met een woonplaats of een deel van een grotere woonplaats.
+
+Buurt:
+Onderdeel van een wijk, die vanuit bebouwingsoogpunt of sociaaleconomische structuur homogeen is afgebakend. Homogeen wil zeggen dat één functie dominant is, bijvoorbeeld woonfunctie (woongebied), werkfunctie (industriegebied) of recreatieve functie (natuurgebied). Functies kunnen echter ook gemengd voorkomen.
+
+",,,,,,
+"Cbs.OData.Topic",2,1,1,"Topic","Gemeentenaam_1","Gemeentenaam","De naam van de bestuurlijke gemeente. Deze naam volgt de officiële schrijfwijze.",,"String","naam",0,"Impossible",""
+"Cbs.OData.Topic",3,2,1,"Topic","SoortRegio_2","Soort regio","De gekozen regioaanduiding betreft: Gemeente, Wijk of Buurt.",,"String","omschrijving",0,"Impossible",""
+"Cbs.OData.Topic",4,3,1,"Topic","Codering_3","Codering","Gemeentecode heeft 4 posities, voorafgegaan door ‘GM’.
+Wijkcode heeft 6 posities: gemeentecode (4) + wijkcode (2), voorafgegaan door ‘WK’.
+Buurtcode heeft 8 posities: gemeentecode (4) + wijkcode (2) + buurtcode (2), voorafgegaan door ‘BU’.",,"String","code",0,"Impossible",""
+"Cbs.OData.Topic",5,4,1,"Topic","IndelingswijzigingGemeenteWijkBuurt_4","Indelingswijziging gemeente, wijk, buurt","Deze indicator geeft per gemeente, wijk en buurt aan of de cijfers uit deze tabel zonder problemen kunnen worden gekoppeld aan en vergeleken met de cijfers van een jaar eerder, of dat er wijzigingen in de gemeentelijke of Wijk- en Buurtindeling zijn waardoor dit niet kan. Detailinformatie over wijzigingen kan worden verkregen door de wijk- en buurtkaart van twee opeenvolgende jaren met elkaar te vergelijken. Mutaties van grenzen kunnen bijvoorbeeld worden veroorzaakt door verzoeken van gemeenten die mutaties in hun buurten en/of wijken doorgeven, maar ook kleinere kadastrale mutaties, gemeentelijke herindelingen of veranderingen van de door het CBS vastgestelde land-watergrens bij grote watergebieden zoals Noordzee, Wadden, IJsselmeer, Markeermeer en Ooster- en Westerschelde kunnen tot veranderingen leiden
+
+De indicator kent drie mogelijke waarden:
+1: De codering en afbakening van deze gemeente/wijk/buurt is ongewijzigd ten opzichte van het voorgaande jaar. Het is wel mogelijk dat een naamswijziging heeft plaatsgevonden. De cijfers kunnen worden gekoppeld en vergeleken met die van het voorgaande jaar.
+2: De codering van de gemeente/wijk/buurt is veranderd ten opzichte van het voorgaande jaar. De afbakening is ongewijzigd. Om te kunnen koppelen met cijfers van het voorgaande jaar zal eerst moeten worden achterhaald wat de codering van het voorgaande jaar was. Is de koppeling eenmaal geslaagd dan kunnen de cijfers alsnog met elkaar worden vergeleken.
+3: De afbakening van de gemeente/wijk/buurt is veranderd ten opzichte van het voorgaande jaar. Dit kan gepaard zijn gegaan met een gewijzigde codering. De cijfers kunnen niet zonder meer worden vergeleken met die van het voorgaande jaar. Verschillen kunnen immers samenhangen met de verandering in de afbakening van de gemeente, wijk of buurt.
+
+Er worden alleen een wijzigingen in de afbakening geconstateerd wanneer een grens circa 5 meter of meer is verlegd. Kleinere grenswijzigingen worden niet als significant beschouwd.",,"String","code",0,"Impossible",""
+"Cbs.OData.TopicGroup",6,,,"TopicGroup","","Bevolking","De bevolking van Nederland op 1 januari.
+
+Bevolking:
+De inwoners van Nederland.
+In de bevolkingsaantallen zijn uitsluitend personen begrepen die zijn opgenomen in het bevolkingsregister van een Nederlandse gemeente. 
+In principe wordt iedereen die voor onbepaalde tijd in Nederland woont, opgenomen in het bevolkingsregister van de woongemeente. Personen die tot de bevolking van Nederland behoren, maar voor wie geen vaste woonplaats valt aan te wijzen, zijn opgenomen in het bevolkingsregister van de gemeente 's-Gravenhage.
+In de bevolkingsregisters zijn niet opgenomen de in Nederland wonende personen waarvoor uitzonderingsregels gelden met betrekking tot opneming in de bevolkingsregisters (bijvoorbeeld diplomaten en NAVO militairen) en personen die niet legaal in Nederland verblijven.
+
+Om redenen van statistische geheimhouding zijn de aantallen op wijk- en buurtniveau aselect afgerond op veelvouden van 5. 
+Bij aselect afronden wordt door loten bepaald of een getal naar boven of naar beneden wordt afgerond. De daarbij gehanteerde kansen zijn omgekeerd evenredig met de afrondverschillen. Gemiddeld wordt een getal hierdoor op zichzelf afgerond. Het gemiddelde afrondverschil per getal is evenwel groter dan het geval is bij afronding op het dichtstbijzijnde veelvoud van 5. Door afrondverschillen is de som van afgeronde getallen niet altijd gelijk aan de afgeronde som. Hierdoor kan het voorkomen dat wanneer een wijk uit één buurt bestaat of een gemeente uit één wijk, dit afgerond niet overeenkomt.
+
+Het komt voor dat van inwoners wel bekend is binnen welke gemeente ze geregistreerd zijn, maar niet exact waar ze verblijven. Deze inwoners zijn daarom wel meegeteld in de gemeentecijfers, maar niet in de cijfers per wijk en buurt. De cijfers per gemeente kunnen daardoor afwijken van de onderliggende wijken of buurten, zelfs wanneer een gemeente slechts uit één wijk bestaat.
+",,,,,,
+"Cbs.OData.Topic",7,5,6,"Topic","AantalInwoners_5","Aantal inwoners",,,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",8,,6,"TopicGroup","","Geslacht",,,,,,,
+"Cbs.OData.Topic",9,6,8,"Topic","Mannen_6","Mannen",,,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",10,7,8,"Topic","Vrouwen_7","Vrouwen",,,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",11,,6,"TopicGroup","","Leeftijdsgroepen",,,,,,,
+"Cbs.OData.Topic",12,8,11,"Topic","k_0Tot15Jaar_8","0 tot 15 jaar","Aantal inwoners dat op 1 januari 0 tot 15 jaar oud is.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",13,9,11,"Topic","k_15Tot25Jaar_9","15 tot 25 jaar","Aantal inwoners dat op 1 januari 15 tot 25 jaar oud is.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",14,10,11,"Topic","k_25Tot45Jaar_10","25 tot 45 jaar","Aantal inwoners dat op 1 januari 25 tot 45 jaar oud is.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",15,11,11,"Topic","k_45Tot65Jaar_11","45 tot 65 jaar","Aantal inwoners dat op 1 januari 45 tot 65 jaar oud is.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",16,12,11,"Topic","k_65JaarOfOuder_12","65 jaar of ouder","Aantal inwoners dat op 1 januari 65 jaar of ouder is.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",17,,6,"TopicGroup","","Burgerlijke staat",,,,,,,
+"Cbs.OData.Topic",18,13,17,"Topic","Ongehuwd_13","Ongehuwd","Het aantal inwoners dat op 1 januari ongehuwd is. De burgerlijke staat ongehuwd geeft aan dat een persoon nog nooit een huwelijk heeft gesloten of een geregistreerd partnerschap is aangegaan.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",19,14,17,"Topic","Gehuwd_14","Gehuwd","Het aantal inwoners dat op 1 januari gehuwd is. De burgerlijke staat gehuwd ontstaat na sluiting van een huwelijk of het aangaan van een geregistreerd partnerschap. Tot de gehuwden worden ook personen gerekend die gescheiden zijn van tafel en bed, want zij blijven formeel gehuwd.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",20,15,17,"Topic","Gescheiden_15","Gescheiden","Het aantal inwoners dat op 1 januari gescheiden is. De burgerlijke staat gescheiden ontstaat na ontbinding van een huwelijk door echtscheiding of na ontbinding van een geregistreerd partnerschap anders dan door het overlijden van de partner. Personen die gescheiden zijn van tafel en bed worden tot de gehuwden gerekend.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",21,16,17,"Topic","Verweduwd_16","Verweduwd","Het aantal inwoners dat op 1 januari verweduwd is. De burgerlijke staat verweduwd ontstaat na ontbinding van een huwelijk of geregistreerd partnerschap door overlijden van de partner.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",22,,6,"TopicGroup","","Bevolking naar herkomst","De bevolking van Nederland op 1 januari.
+
+Bevolking:
+De inwoners van Nederland.
+In de bevolkingsaantallen zijn uitsluitend personen begrepen die zijn opgenomen in het bevolkingsregister van een Nederlandse gemeente. 
+In principe wordt iedereen die voor onbepaalde tijd in Nederland woont, opgenomen in het bevolkingsregister van de woongemeente. Personen die tot de bevolking van Nederland behoren, maar voor wie geen vaste woonplaats valt aan te wijzen, zijn opgenomen in het bevolkingsregister van de gemeente 's-Gravenhage.
+In de bevolkingsregisters zijn niet opgenomen de in Nederland wonende personen waarvoor uitzonderingsregels gelden met betrekking tot opneming in de bevolkingsregisters (bijvoorbeeld diplomaten en NAVO militairen) en personen die niet legaal in Nederland verblijven.
+
+Herkomst:
+Kenmerk dat weergeeft in welk land iemand geboren is of waar diens ouders geboren zijn.
+De herkomst van personen die in het buitenland zijn geboren wordt bepaald door hun eigen geboorteland. Bij personen die in Nederland geboren zijn, wordt de herkomst bepaald door het geboorteland van de ouders. 
+Wanneer beide ouders in het buitenland zijn geboren, is het geboorteland van de moeder leidend in het bepalen van de herkomst. De geboortegegevens van de moeder zijn vaker bekend dan die van de vader. Wanneer de moeder in Nederland is geboren of het geboorteland van de moeder onbekend is, dan wordt het geboorteland van de vader gebruikt.
+",,,,,,
+"Cbs.OData.TopicGroup",23,,22,"TopicGroup","","Herkomstland",,,,,,,
+"Cbs.OData.Topic",24,17,23,"Topic","Nederland_17","Nederland",,,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",25,18,23,"Topic","EuropaExclusiefNederland_18","Europa (exclusief Nederland) ","Herkomst Europa (exclusief Nederland). De landen Armenië, Azerbeidzjan, Georgië, Kazachstan, Kirgizië, Oezbekistan, Tadzjikistan, Turkmenistan en Turkije vallen binnen deze indeling onder Azië.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",26,19,23,"Topic","BuitenEuropa_19","Buiten Europa ","Totaal herkomst buiten Europa",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",27,,22,"TopicGroup","","Geboren in Nederland",,,,,,,
+"Cbs.OData.Topic",28,20,27,"Topic","Nederland_20","Nederland",,,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",29,21,27,"Topic","EuropaExclusiefNederland_21","Europa (exclusief Nederland) ","Geboren in Nederland, herkomst Europa (exclusief Nederland). De landen Armenië, Azerbeidzjan, Georgië, Kazachstan, Kirgizië, Oezbekistan, Tadzjikistan, Turkmenistan en Turkije vallen binnen deze indeling onder Azië",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",30,22,27,"Topic","BuitenEuropa_22","Buiten Europa ","Geboren in Nederland, herkomst buiten Europa.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",31,,22,"TopicGroup","","Geboren buiten Nederland",,,,,,,
+"Cbs.OData.Topic",32,23,31,"Topic","EuropaExclusiefNederland_23","Europa (exclusief Nederland)","Geboren buiten Nederland. Herkomst Europa (exclusief Nederland). De landen Armenië, Azerbeidzjan, Georgië, Kazachstan, Kirgizië, Oezbekistan, Tadzjikistan, Turkmenistan en Turkije vallen binnen deze indeling onder Azië.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",33,24,31,"Topic","BuitenEuropa_24","Buiten Europa","Geboren buiten Nederland, herkomst buiten Europa.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",34,,6,"TopicGroup","","Geboorte en sterfte",,,,,,,
+"Cbs.OData.Topic",35,25,34,"Topic","GeboorteTotaal_25","Geboorte totaal","Het aantal levendgeborenen van 1 januari tot en met 31 december van het betreffende jaar. Levendgeborenen zijn kinderen die na geboorte enig teken van leven hebben vertoond, ongeacht de zwangerschapsduur.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",36,26,34,"Topic","GeboorteRelatief_26","Geboorte relatief","Het aantal levendgeborenen van 1 januari tot en met 31 december, per 1 000 inwoners op 1 januari van het betreffende jaar.
+Het relatieve aantal geboorten kan hoger uitvallen dan verwacht op basis van het inwonertal. Het relatieve cijfer betreft namelijk het aantal geboorten gedurende het jaar ten opzichte van het aantal inwoners op 1 januari. In nieuwbouwwijken kan het aantal inwoners sterk groeien in een jaar. Zo kunnen er in 1 jaar 10 kinderen geboren worden in een wijk waarin op 1 januari slechts 10 inwoners wonen, maar aan het eind van het jaar bijvoorbeeld 200 inwoners.",,"Long","per 1 000 inwoners",0,"Impossible","Relative"
+"Cbs.OData.Topic",37,27,34,"Topic","SterfteTotaal_27","Sterfte totaal","Alle overledenen van 1 januari tot en met 31 december van het betreffende jaar waarbij een bevoegde arts een overlijdensakte heeft ondertekend.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",38,28,34,"Topic","SterfteRelatief_28","Sterfte relatief","Het aantal overledenen van 1 januari tot en met 31 december, per 1 000 inwoners op 1 januari van het betreffende jaar.
+Het relatieve aantal overledenen kan hoger uitvallen dan verwacht op basis van het inwonertal. Het relatieve cijfer betreft namelijk het aantal overledenen gedurende het jaar ten opzichte van het aantal inwoners op 1 januari. In een buurt met een verpleeghuis kunnen op 1 januari 100 mensen wonen, maar door overlijdensgevallen komen er steeds nieuwe inwoners (bewoners van het verpleeghuis). Zo kan het aantal overlijdensgevallen ook 100 zijn, terwijl er inmiddels al vele mensen in die buurt (of dat verpleeghuis) hebben gewoond.",,"Long","per 1 000 inwoners",0,"Impossible","Relative"
+"Cbs.OData.TopicGroup",39,,6,"TopicGroup","","Particuliere huishoudens","Betreft de huishoudens op 1 januari. 
+Particuliere huishoudens bestaan uit één of meer personen die alleen of samen in een woonruimte zijn gehuisvest en zelf in hun dagelijks onderhoud voorzien. Naast eenpersoonshuishoudens onderscheiden we meerpersoonshuishoudens (niet-gehuwde paren, niet-gehuwde paren met kinderen, echtparen, echtparen met kinderen, eenouderhuishoudens en overige huishoudens). De institutionele huishoudens worden hiertoe niet gerekend.",,,,,,
+"Cbs.OData.Topic",40,29,39,"Topic","HuishoudensTotaal_29","Huishoudens totaal","Totaal particuliere huishoudens.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",41,30,39,"Topic","Eenpersoonshuishoudens_30","Eenpersoonshuishoudens","Een particulier huishouden bestaande uit één persoon.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",42,31,39,"Topic","HuishoudensZonderKinderen_31","Huishoudens zonder kinderen","Meerpersoonshuishoudens zonder kinderen bestaan uit niet-gehuwde paren zonder kinderen, echtparen zonder kinderen en overige huishoudens.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",43,32,39,"Topic","HuishoudensMetKinderen_32","Huishoudens met kinderen","Meerpersoonshuishoudens met kinderen bestaan uit niet-gehuwde paren met kinderen, echtparen met kinderen en eenouderhuishoudens.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",44,33,39,"Topic","GemiddeldeHuishoudensgrootte_33","Gemiddelde huishoudensgrootte","Dit gemiddelde is berekend als het aantal in particuliere huishoudens levende personen gedeeld door het aantal particuliere huishoudens.",,"Double","aantal",1,"Impossible","Absolute"
+"Cbs.OData.Topic",45,34,6,"Topic","Bevolkingsdichtheid_34","Bevolkingsdichtheid","Het (niet afgeronde) aantal inwoners per km² land is bepaald door het (niet afgeronde) aantal inwoners op 1 januari te delen door de (niet afgeronde) landoppervlakte. 
+De bevolkingsdichtheid is opgenomen indien er 10 of meer inwoners in de buurt voorkomen.
+
+",,"Long","aantal inwoners per km²",0,"Impossible","Relative"
+"Cbs.OData.TopicGroup",46,,,"TopicGroup","","Wonen",,,,,,,
+"Cbs.OData.Topic",47,35,46,"Topic","Woningvoorraad_35","Woningvoorraad","Het totale aantal woningen op 1 januari van het desbetreffende jaar. Een woning is een verblijfsobject met minimaal een woonfunctie en eventueel één of meer andere gebruiksfuncties.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",48,36,46,"Topic","GemiddeldeWOZWaardeVanWoningen_36","Gemiddelde WOZ-waarde van woningen","Voor de bepaling van de gemiddelde WOZ-waarde van woningen wordt alleen gebruik gemaakt van BAG-objecten met een woonfunctie waarvoor een WOZ-waarde bekend is en die tussen de 10 duizend en de 5 miljoen euro ligt. 
+
+Er wordt geen gemiddelde WOZ-waarde bepaald voor een regio als:
+-	de woningvoorraad kleiner is dan 20 woningen
+-	er voor minder dan 20 woningen een WOZ-waarde bekend is
+-	er voor minder dan 85 procent van de woningen een WOZ-waarde bekend is.
+
+De (voorlopig) gemiddelde woningwaarde wordt bepaald met de waardepeildatum van voorgaand jaar, bijv:
+- 2023: waardepeildatum 1 januari 2022
+
+Het betreft nader voorlopige cijfers.
+",,"Long","x 1 000 euro",0,"Impossible","Relative"
+"Cbs.OData.TopicGroup",49,,46,"TopicGroup","","Woningen naar type","Er worden twee typen woningen onderscheiden, eengezins en meergezins. Een woning heeft het type meergezins wanneer het samen met andere woningen of (bedrijfs)ruimten een geheel pand vormt. Hieronder vallen flats, galerij-, portiek-, beneden- en bovenwoningen, appartementen en woningen boven bedrijfsruimten, voorzover deze zijn voorzien van een buiten de bedrijfsruimte gelegen toegangsdeur. Alle overige woningen hebben het type eengezins.",,,,,,
+"Cbs.OData.Topic",50,37,49,"Topic","PercentageEengezinswoning_37","Percentage eengezinswoning","Peildatum: 1 januari van het desbetreffende jaar.
+Het aantal eengezinswoningen is vermeld als percentage van de totale woningvoorraad en wordt alleen vermeld bij minimaal 20 woningen.
+Eengezinswoning: Elke woning die tevens een geheel pand vormt. Hieronder vallen vrijstaande woningen, aaneengebouwde woningen, zoals twee onder één kap gebouwde hele huizen, boerderijen met woningen en voorts alle rijenhuizen.
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.Topic",51,38,49,"Topic","PercentageMeergezinswoning_38","Percentage meergezinswoning","Peildatum: 1 januari van het desbetreffende jaar.
+Het aantal meergezinswoningen is vermeld als percentage van de totale woningvoorraad en wordt alleen vermeld bij minimaal 20 woningen.
+Meergezinswoning : Elke woning die samen met andere woonruimten c.q. bedrijfsruimten een geheel pand vormt. Hieronder vallen flats, galerij-, portiek-, beneden- en bovenwoningen, appartementen en woningen boven bedrijfsruimten, voor zover deze zijn voorzien van een buiten de bedrijfsruimte gelegen toegangsdeur.
+
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.TopicGroup",52,,46,"TopicGroup","","Woningen naar bewoning","Een woning is bewoond als er volgens de Basisregistratie Personen (BRP) op peildatum 1 januari minimaal 1 persoon stond ingeschreven op het bijbehorende adres. Alle overige woningen, die wel voor bewoning beschikbaar zijn, worden beschouwd als onbewoond.",,,,,,
+"Cbs.OData.Topic",53,39,52,"Topic","PercentageBewoond_39","Percentage bewoond","Peildatum: 1 januari van het desbetreffende jaar.
+Het aantal bewoonde woningen is vermeld als percentage van de totale woningvoorraad en wordt alleen vermeld bij minimaal 20 woningen.
+Bewoonde woningen: Woningen waar op de peildatum 1 januari minimaal 1 persoon stond ingeschreven in de Basisregistratie Personen (BRP).
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.Topic",54,40,52,"Topic","PercentageOnbewoond_40","Percentage onbewoond","Peildatum: 1 januari van het desbetreffende jaar.
+Het aantal leegstaande woningen is vermeld als percentage van de totale woningvoorraad en wordt alleen vermeld bij minimaal 20 woningen.
+Niet-bewoonde woningen: Woningen waar op de peildatum 1 januari niemand stond ingeschreven in de Basisregistratie Personen (BRP).
+
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.TopicGroup",55,,46,"TopicGroup","","Woningen naar eigendom","Informatie over huur- en koopwoningen wordt samengesteld uit een koppeling tussen verschillende bronnen.",,,,,,
+"Cbs.OData.Topic",56,41,55,"Topic","Koopwoningen_41","Koopwoningen","Woningen die eigendom zijn van de (toekomstige) bewoner(s) of in gebruik als tweede woning. 
+
+Peildatum: 1 januari van het desbetreffende jaar.
+Het aantal is vermeld als percentage van het totaal aantal woningen en vermeld bij 20 woningen of meer per buurt en wanneer het aandeel woningen met eigendom onbekend 50 procent of minder bedroeg.
+
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.TopicGroup",57,,55,"TopicGroup","","Huurwoningen","Woningen die niet bewoond worden door de eigenaar van de woning. Bij woningen waar geen bewoner geregistreerd is, gaat het om woningen waarvan het aannemelijk is dat de woning bestemd is voor de huurmarkt.",,,,,,
+"Cbs.OData.Topic",58,42,57,"Topic","HuurwoningenTotaal_42","Huurwoningen totaal","Peildatum: 1 januari van het desbetreffende jaar.
+Het aantal is vermeld als percentage van het totaal aantal woningen en vermeld bij 20 woningen of meer per buurt en wanneer het aandeel woningen met eigendom onbekend 50 procent of minder bedroeg.
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.Topic",59,43,57,"Topic","InBezitWoningcorporatie_43","In bezit woningcorporatie","Huurwoningen in eigendom van 'toegelaten instellingen volkshuisvesting'. Het betreft het aantal huurwoningen waarvan is vastgesteld dat de eigenaar een toegelaten instelling is. Het betreft niet het aantal sociale huurwoningen, omdat er alleen is vastgesteld wie de eigenaar is en er niet is gekeken naar de hoogte van de huurprijs.
+Toegelaten instellingen: woningbouwvereniging, woningstichting, woningcorporatie. 
+Sociale huurwoningen: woningen met een huur onder de liberalisatiegrens.
+
+Peildatum: 1 januari van het desbetreffende jaar.
+Het aantal is vermeld als percentage van het totaal aantal woningen en vermeld bij 20 woningen of meer per buurt en wanneer het aandeel woningen met eigendom onbekend 50 procent of minder bedroeg.
+
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.Topic",60,44,57,"Topic","InBezitOverigeVerhuurders_44","In bezit overige verhuurders","Een huurwoning in eigendom van onder andere bedrijven, particulieren en institutionele beleggers. Huurwoningen waarvan het eigendom wel kon worden vastgesteld maar de eigenaar niet vallen hier ook onder. 
+Bedrijven: alle instellingen met een bedrijfsmatig karakter zoals bv's en nv's, zelfstandige ondernemers, makelaars en vastgoedhandelsmaatschappijen.
+Particulieren: alle natuurlijke personen.
+Institutionele beleggers: pensioenfondsen, beurs-, beleggings- en verzekeringsmaatschappijen.
+
+Peildatum: 1 januari van het desbetreffende jaar.
+Het aantal is vermeld als percentage van het totaal aantal woningen en vermeld bij 20 woningen of meer per buurt en wanneer het aandeel woningen met eigendom onbekend 50 procent of minder bedroeg.
+
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.Topic",61,45,55,"Topic","EigendomOnbekend_45","Eigendom onbekend","Woningen waarvan het eigendom niet afgeleid kon worden op basis van diverse registraties zoals het WOZ-register, Personenregister en het woningbestand Kadaster. 
+
+Peildatum: 1 januari van het desbetreffende jaar.
+Het aantal is vermeld als percentage van het totaal aantal woningen en vermeld bij 20 woningen of meer per buurt en wanneer het aandeel woningen met eigendom onbekend 50 procent of minder bedroeg.
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.TopicGroup",62,,46,"TopicGroup","","Woningen naar bouwjaar","De aanduiding van het bouwjaar van een pand, waarin een woning zich bevindt. Oorspronkelijk als het pand bouwkundig gereed is of wordt opgeleverd. Latere wijziging aan een pand leidt niet tot wijziging van het bouwjaar. Bij een verblijfobject dat in meerdere panden is gelegen, wordt het oudste bouwjaar genomen.
+De bouwjaarklasse heeft hier twee waarden: 
+1) in of na het jaar 2000 gebouwd; 
+2) vóór het jaar 2000 gebouwd.
+",,,,,,
+"Cbs.OData.Topic",63,46,62,"Topic","BouwjaarVoor2000_46","Bouwjaar voor 2000","Peildatum: 1 januari van het desbetreffende jaar.
+Het aantal woningen met bouwjaar vóór 2000, uitgedrukt in hele procenten van het totaal aantal woningen. Het percentage is vermeld bij 20 woningen of meer per buurt.
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.Topic",64,47,62,"Topic","BouwjaarVanaf2000_47","Bouwjaar vanaf 2000","Peildatum: 1 januari van het desbetreffende jaar.
+Het aantal woningen met bouwjaar 2000 of later, uitgedrukt in hele procenten van het totaal aantal woningen. Het percentage is vermeld bij 20 woningen of meer per buurt.
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.TopicGroup",65,,,"TopicGroup","","Energie",,,,,,,
+"Cbs.OData.TopicGroup",66,,65,"TopicGroup","","Gemiddelde elektriciteitslevering","De gemiddelde jaarlevering van elektriciteit op individuele aansluitingen van particuliere woningen op het openbare elektriciteitsnet, zoals berekend vanuit de aansluitingenregisters van de netbedrijven. Collectieve elektriciteitsleveringen aan bijvoorbeeld liftinstallaties of hal-/galerijverlichting zijn niet meegeteld bij de berekening. 
+
+De cijfers zijn afgerond op tientallen en vermeld bij zes of meer (bewoonde) woningen per woningtype of type eigendom.
+",,,,,,
+"Cbs.OData.Topic",67,48,66,"Topic","GemiddeldeElektriciteitsleveringTotaal_48","Gemiddelde elektriciteitslevering totaal","De gemiddelde elektriciteitslevering voor alle woningtypen samen.",,"Long","kWh",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",68,,66,"TopicGroup","","Naar woningtype","De volgende typen worden onderscheiden: appartement, tussenwoning, hoekwoning, twee-onder-één-kap-woning en vrijstaande woning. 
+De typering wordt bepaald door het Kadaster.
+",,,,,,
+"Cbs.OData.Topic",69,49,68,"Topic","Appartement_49","Appartement","Een geheel van bij elkaar horende vertrekken als afzonderlijke woongelegenheid binnen een grotere woning waarbij de opdeling van het gebouw heeft plaatsgevonden volgens het appartementsrecht. Een bovenwoning of flat die geen appartement is wordt niet meegenomen bij het berekenen van de verbruikscijfers.",,"Long","kWh",0,"Impossible","Absolute"
+"Cbs.OData.Topic",70,50,68,"Topic","Tussenwoning_50","Tussenwoning",,,"Long","kWh",0,"Impossible","Absolute"
+"Cbs.OData.Topic",71,51,68,"Topic","Hoekwoning_51","Hoekwoning",,,"Long","kWh",0,"Impossible","Absolute"
+"Cbs.OData.Topic",72,52,68,"Topic","TweeOnderEenKapWoning_52","Twee-onder-één-kap-woning",,,"Long","kWh",0,"Impossible","Absolute"
+"Cbs.OData.Topic",73,53,68,"Topic","VrijstaandeWoning_53","Vrijstaande woning",,,"Long","kWh",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",74,,66,"TopicGroup","","Naar eigendom","De volgende typen worden onderscheiden: huur- of koopwoning.  Deze informatie wordt samengesteld uit een koppeling tussen de Basisregistratie Adressen en Gebouwen (BAG) en het WOZ-register met een aanvulling uit het woningbestand van het Kadaster.",,,,,,
+"Cbs.OData.Topic",75,54,74,"Topic","Huurwoning_54","Huurwoning","Woningen in eigendom van 'toegelaten instellingen' (woningcorporaties), van institutionele beleggers of van particulieren die de woning verhuren aan de bewoner.",,"Long","kWh",0,"Impossible","Absolute"
+"Cbs.OData.Topic",76,55,74,"Topic","EigenWoning_55","Eigen woning","Woningen die eigendom zijn of worden van de (toekomstige) bewoners.",,"Long","kWh",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",77,,65,"TopicGroup","","Gemiddeld aardgasverbruik","Het gemiddeld jaarverbruik voor aardgas van particuliere woningen, zoals berekend uit de aansluitingenregisters van de energienetbedrijven.
+Bij de berekening van het gemiddeld aardgasverbruik zijn woningen met een zeer laag of zelfs nulverbruik meegeteld indien er sprake is van stadsverwarming. Hierdoor valt in gebieden waar stadsverwarming aanwezig is het gemiddeld aardgasverbruik van woningen laag uit.
+
+De cijfers zijn afgerond op tientallen en vermeld bij zes of meer (bewoonde) woningen per woningtype of type eigendom.
+
+",,,,,,
+"Cbs.OData.Topic",78,56,77,"Topic","GemiddeldAardgasverbruikTotaal_56","Gemiddeld aardgasverbruik totaal","Het gemiddeld aardgasverbruik voor alle woningtypen samen.",,"Long","m³",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",79,,77,"TopicGroup","","Naar woningtype","De volgende typen worden onderscheiden: appartement, tussenwoning, hoekwoning, twee-onder-één-kap-woning en vrijstaande woning. De typering wordt bepaald door het Kadaster.",,,,,,
+"Cbs.OData.Topic",80,57,79,"Topic","Appartement_57","Appartement","Een geheel van bij elkaar horende vertrekken als afzonderlijke woongelegenheid binnen een grotere woning waarbij de opdeling van het gebouw heeft plaatsgevonden volgens het appartementsrecht. Een bovenwoning of flat die geen appartement is wordt niet meegenomen bij het berekenen van de verbruikscijfers.",,"Long","m³",0,"Impossible","Absolute"
+"Cbs.OData.Topic",81,58,79,"Topic","Tussenwoning_58","Tussenwoning",,,"Long","m³",0,"Impossible","Absolute"
+"Cbs.OData.Topic",82,59,79,"Topic","Hoekwoning_59","Hoekwoning",,,"Long","m³",0,"Impossible","Absolute"
+"Cbs.OData.Topic",83,60,79,"Topic","TweeOnderEenKapWoning_60","Twee-onder-één-kap-woning",,,"Long","m³",0,"Impossible","Absolute"
+"Cbs.OData.Topic",84,61,79,"Topic","VrijstaandeWoning_61","Vrijstaande woning",,,"Long","m³",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",85,,77,"TopicGroup","","Naar eigendom","De volgende typen worden onderscheiden: huur- of koopwoning.  Deze informatie wordt samengesteld uit een koppeling tussen de Basisregistratie Adressen en Gebouwen (BAG) en het WOZ-register met een aanvulling uit het woningbestand van het Kadaster.",,,,,,
+"Cbs.OData.Topic",86,62,85,"Topic","Huurwoning_62","Huurwoning","Woningen in eigendom van 'toegelaten instellingen' (woningcorporaties), van institutionele beleggers of van particulieren die de woning verhuren aan de bewoner.",,"Long","m³",0,"Impossible","Absolute"
+"Cbs.OData.Topic",87,63,85,"Topic","EigenWoning_63","Eigen woning","Woningen die eigendom zijn of worden van de (toekomstige) bewoners.",,"Long","m³",0,"Impossible","Absolute"
+"Cbs.OData.Topic",88,64,77,"Topic","PercentageWoningenMetStadsverwarming_64","Percentage woningen met stadsverwarming","Het percentage woningen dat is aangesloten op stadsverwarming. 
+
+Stadsverwarming is een verwarmingssysteem waarbij de woningen in een wijk worden verwarmd via een ondergronds netwerk van warmwaterleidingen. In veel gevallen maakt stadsverwarming gebruik van restwarmte van bijvoorbeeld elektriciteitscentrales. Het aardgasverbruik van deze woningen is in veel gevallen zeer laag of zelfs nul. De hoeveelheid warmte die door aangesloten woningen in een jaar wordt afgenomen van de stadsverwarming is niet beschikbaar. Het percentage is vermeld bij tien of meer (bewoonde) woningen. Voor de gemeentes is een percentage van minder dan vijf of groter dan 95 afgerond op vijftallen.
+",,"Double","%",1,"Impossible","Relative"
+"Cbs.OData.TopicGroup",89,,,"TopicGroup","","Opleidingsniveau","Deze variabelen geven het aantal laag, middelbaar en hoog opgeleiden per gemeente, wijk en buurt in Nederland. De gegevens hebben betrekking op alle personen die op 1 oktober in een Nederlandse gemeente waren ingeschreven en op dat moment behoorden tot de leeftijdscategorie 15 tot 75 jaar.
+
+Cijfers worden afgerond op tientallen.
+De gepresenteerde cijfers kunnen licht afwijken van de som van de gegevens op onderliggende regionale niveaus. Dit heeft te maken met afronding evenals met de toegepaste schattingsmethode.
+Buurten / wijken met minder dan 30 inwoners worden onderdrukt. Het kan voorkomen dat extra buurten  / wijken worden onderdrukt i.v.m. risico op indirecte onthulling of groepsonthulling.
+",,,,,,
+"Cbs.OData.Topic",90,65,89,"Topic","OpleidingsniveauLaag_65","Opleidingsniveau laag","Het aantal personen die op 1 oktober (jaar T) tussen de 15 en 75 jaar oud waren en waren ingeschreven in een Nederlandse gemeente, waarvan het hoogst behaalde onderwijsniveau laag onderwijs betreft. Laag onderwijs omvat onderwijs op het niveau van basisonderwijs, het vmbo, de eerste 3 leerjaren van havo/vwo en de entreeopleiding, de voormalige assistentenopleiding (mbo1), praktijkonderwijs.
+
+Het betreft voorlopige cijfers.
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",91,66,89,"Topic","OpleidingsniveauMiddelbaar_66","Opleidingsniveau middelbaar","Het aantal personen die op 1 oktober (jaar T) tussen de 15 en 75 jaar oud waren en waren ingeschreven in een Nederlandse gemeente, waarvan het hoogstbehaalde onderwijsniveau middelbaar onderwijs betreft. Middelbaar onderwijs omvat 
+de bovenbouw van havo/vwo, de basisberoepsopleiding (mbo2), de vakopleiding (mbo3) en de middenkader- en specialistenopleidingen (mbo4).
+
+Het betreft voorlopige cijfers.
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",92,67,89,"Topic","OpleidingsniveauHoog_67","Opleidingsniveau hoog","Het aantal personen die op 1 oktober (jaar T) tussen de 15 en 75 jaar oud waren en waren ingeschreven in een Nederlandse gemeente, waarvan het hoogstbehaalde onderwijsniveau hoog onderwijs betreft. Hoog onderwijs omvat onderwijs op het niveau van hbo of wo.
+
+Het betreft voorlopige cijfers.
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",93,,,"TopicGroup","","Arbeid","Deze variabelen geven per gemeente, wijk en buurt inzicht in de nettoarbeidsparticipatie en het percentage werknemers en zelfstandigen. 
+
+De nettoarbeidsparticipatie is vermeld als percentage van het totaal aantal personen van 15 tot 75 jaar en vermeld bij minimaal 150 inwoners in een buurt. Het percentage werknemers en het percentage zelfstandigen zijn vermeld bij minimaal 150 werkenden (van 15 tot 75 jaar) in een buurt.
+",,,,,,
+"Cbs.OData.Topic",94,68,93,"Topic","Nettoarbeidsparticipatie_68","Nettoarbeidsparticipatie","Het aandeel van de werkzame beroepsbevolking in de bevolking (beroeps- en niet-beroepsbevolking).
+
+Deze definitie heeft betrekking op personen die in Nederland wonen (exclusief de institutionele bevolking). De gegevens worden meestal gepresenteerd voor de bevolking van 15 tot 75 jaar.
+
+Het betreft voorlopige cijfers.
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.TopicGroup",95,,93,"TopicGroup","","Onderverdeling werkenden",,,,,,,
+"Cbs.OData.Topic",96,69,95,"Topic","PercentageWerknemers_69","Percentage werknemers","Een persoon die in een arbeidsovereenkomst afspraken met een economische eenheid maakt om arbeid te verrichten waartegenover een financiële beloning staat.
+
+Als een persoon meer dan één baan of werkkring heeft, dan wordt uitgegaan van de baan of werkkring waaraan de meeste tijd wordt besteed.
+
+Het betreft voorlopige cijfers.
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.Topic",97,70,95,"Topic","PercentageZelfstandigen_70","Percentage zelfstandigen","Een persoon die voor eigen rekening of risico arbeid verricht 
+- in een eigen bedrijf of praktijk (zelfstandig ondernemer),  
+- als directeur-grootaandeelhouder (dga),
+- in het bedrijf of de praktijk van een gezinslid (meewerkend gezinslid), of 
+- als overige zelfstandige.
+
+Als een persoon meer dan één baan of werkkring heeft, dan wordt uitgegaan van de baan of werkkring waaraan de meeste tijd wordt besteed.
+
+Het betreft voorlopige cijfers.
+",,"Long","%",0,"Impossible","Relative"
+"Cbs.OData.TopicGroup",98,,,"TopicGroup","","Inkomen","Deze variabelen geven informatie over het persoonlijk inkomen van personen in particuliere huishoudens waarvan het inkomen is waargenomen en het inkomen van particuliere huishoudens met een waargenomen inkomen. De gegevens komen uit de Integrale Inkomens- en Vermogensstatistiek (IIVS) met als populatie de bevolking van Nederland op 1 januari van het verslagjaar met het inkomen over het verslagjaar. 
+
+De Integrale Inkomens- en Vermogensstatistiek van het CBS is voornamelijk gebaseerd op registers afkomstig van het Ministerie van Financiën (de fiscale registers) en de bevolkingsregisters van de Nederlandse gemeenten (Basisregistratie personen). De Basisregistratie personen is een register waarin alle inwoners van een gemeente behoren te zijn ingeschreven. Uitgezonderd zijn:
+- Inwoners van Nederland die gebruik maken van uitzonderingsregels die gelden met betrekking tot opneming in de bevolkingsregisters (niet-Nederlandse diplomaten en niet-Nederlandse NAVO militairen). Zij mogen zelf bepalen of zij in de bevolkingsregisters ingeschreven worden of niet.
+- Asielzoekers die korter dan zes maanden in de centrale opvang verblijven en nog geen verblijfsvergunning hebben gekregen.
+",,,,,,
+"Cbs.OData.TopicGroup",99,,98,"TopicGroup","","Inkomen van personen","De doelpopulatie bestaat uit personen behorende tot particuliere huishoudens waarvan het inkomen is waargenomen.
+ 
+De inkomensgegevens zijn gebaseerd op het persoonlijk inkomen. Dit omvat de volgende bestanddelen van het bruto-inkomen van een persoon:
+- inkomen uit arbeid;
+- inkomen uit eigen onderneming;
+- uitkering inkomensverzekeringen;
+- uitkering sociale voorzieningen (met uitzondering van kinderbijslag).
+",,,,,,
+"Cbs.OData.Topic",100,71,99,"Topic","AantalInkomensontvangers_71","Aantal inkomensontvangers  ","Personen met persoonlijk inkomen in particuliere huishoudens. 
+De cijfers zijn afgerond op honderdtallen.
+
+Het betreft voorlopige cijfers.
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",101,72,99,"Topic","GemiddeldInkomenPerInkomensontvanger_72","Gemiddeld inkomen per inkomensontvanger ","Het rekenkundig gemiddeld persoonlijk inkomen per persoon op basis van personen met persoonlijk inkomen die deel uitmaken van particuliere huishoudens.
+De waarde is vermeld bij minimaal 2.500 personen met persoonlijk inkomen in particuliere huishoudens per regio.
+
+Het betreft voorlopige cijfers.
+",,"Double","x 1 000 euro",1,"Impossible","Relative"
+"Cbs.OData.Topic",102,73,99,"Topic","GemiddeldInkomenPerInwoner_73","Gemiddeld inkomen per inwoner ","Het rekenkundig gemiddeld persoonlijk inkomen per persoon op basis van de totale bevolking in particuliere huishoudens.
+De waarde is vermeld bij minimaal 2.500 personen in particuliere huishoudens per regio.
+
+Het betreft voorlopige cijfers.
+",,"Double","x 1 000 euro",1,"Impossible","Relative"
+"Cbs.OData.Topic",103,74,99,"Topic","k_40PersonenMetLaagsteInkomen_74","40% personen met laagste inkomen","Aandeel personen in particuliere huishoudens die behoren tot de landelijke 40% personen met het laagste persoonlijk inkomen.
+Personen met persoonlijk inkomen in particuliere huishoudens zijn ingedeeld naar hoogte van het persoonlijk inkomen. 
+De indeling vindt plaats nadat alle personen landelijk zijn gerangschikt van laag naar hoog persoonlijk inkomen. Tot de laagste 40-procent-groep worden de veertig procent personen met het laagste persoonlijk inkomen gerekend.
+Het persoonlijk inkomen omvat inkomen uit arbeid, inkomen uit eigen onderneming, uitkering inkomensverzekeringen en uitkering sociale voorzieningen (met uitzondering van kinderbijslag).
+Het percentage is vermeld bij minimaal 100 personen met persoonlijk inkomen in particuliere huishoudens per regio.
+
+Het betreft voorlopige cijfers.
+
+",,"Double","%",1,"Impossible","Relative"
+"Cbs.OData.Topic",104,75,99,"Topic","k_20PersonenMetHoogsteInkomen_75","20% personen met hoogste inkomen","Aandeel personen in particuliere huishoudens die behoren tot de landelijke 20% personen met het hoogste persoonlijk inkomen.
+Personen met persoonlijk inkomen in particuliere huishoudens zijn ingedeeld naar hoogte van het persoonlijk inkomen. 
+De indeling vindt plaats nadat alle personen landelijk zijn gerangschikt van laag naar hoog persoonlijk inkomen. Tot de hoogste 20-procent-groep worden de twintig procent personen met het hoogste persoonlijk inkomen gerekend.
+Het persoonlijk inkomen omvat inkomen uit arbeid, inkomen uit eigen onderneming, uitkering inkomensverzekeringen en uitkering sociale voorzieningen (met uitzondering van kinderbijslag).
+Het percentage is vermeld bij minimaal 100 personen met persoonlijk inkomen in particuliere huishoudens per regio.
+
+Het betreft voorlopige cijfers.
+
+",,"Double","%",1,"Impossible","Relative"
+"Cbs.OData.TopicGroup",105,,98,"TopicGroup","","Inkomen van huishoudens","De doelpopulatie bestaat uit particuliere huishoudens waarvan het inkomen is waargenomen.",,,,,,
+"Cbs.OData.Topic",106,76,105,"Topic","GemGestandaardiseerdInkomenVanHuish_76","Gem. gestandaardiseerd inkomen van huish","Het besteedbaar inkomen gecorrigeerd voor verschillen in grootte en samenstelling van het huishouden. Deze correctie vindt plaats met behulp van equivalentiefactoren. In de equivalentiefactor komen de schaalvoordelen tot uitdrukking die het gevolg zijn van het voeren van een gemeenschappelijke huishouding. Met behulp van de equivalentiefactoren worden alle inkomens herleid tot het inkomen van een eenpersoonshuishouden. Op deze wijze zijn de welvaartsniveaus van huishoudens onderling vergelijkbaar gemaakt. Het gestandaardiseerd inkomen is een maat voor de welvaart van (de leden van) een huishouden.
+
+Het betreft voorlopige cijfers.
+
+",,"Double","x 1 000 euro",1,"Impossible","Relative"
+"Cbs.OData.Topic",107,77,105,"Topic","k_40HuishoudensMetLaagsteInkomen_77","40% huishoudens met laagste inkomen","Aandeel particuliere huishoudens die behoren tot de landelijke 40% huishoudens met het laagste huishoudensinkomen.
+Particuliere huishoudens zijn ingedeeld naar hoogte van het besteedbaar huishoudensinkomen. 
+De indeling vindt plaats nadat huishoudens landelijk zijn gerangschikt van laag naar hoog besteedbaar huishoudensinkomen. Tot de laagste 40-procent-groep worden de veertig procent huishoudens met het laagste besteedbaar inkomen gerekend.
+Het percentage is vermeld bij minimaal 100 particuliere huishoudens per regio. 
+
+Het besteedbaar inkomen van particuliere huishoudens bestaat uit het bruto-inkomen verminderd met: 
+- betaalde inkomensoverdrachten, zoals alimentatie van de ex-echtgeno(o)t(e);
+- premies inkomensverzekeringen zoals premies betaald voor sociale verzekeringen, volksverzekeringen en particuliere verzekeringen in verband met werkloosheid, arbeidsongeschiktheid en ouderdom en nabestaanden;
+- premies ziektekostenverzekeringen;
+- belastingen op inkomen en vermogen.
+
+Het betreft voorlopige cijfers.
+",,"Double","%",1,"Impossible","Relative"
+"Cbs.OData.Topic",108,78,105,"Topic","k_20HuishoudensMetHoogsteInkomen_78","20% huishoudens met hoogste inkomen","Aandeel particuliere huishoudens die behoren tot de landelijke 20% huishoudens met het hoogste huishoudensinkomen.
+Particuliere huishoudens zijn ingedeeld naar hoogte van het besteedbaar huishoudensinkomen. 
+De indeling vindt plaats nadat huishoudens landelijk zijn gerangschikt van laag naar hoog besteedbaar huishoudensinkomen. Tot de hoogste 20-procent-groep worden de twintig procent huishoudens met het hoogste besteedbaar inkomen gerekend.
+Het percentage is vermeld bij minimaal 100 particuliere huishoudens per regio. 
+
+Het besteedbaar inkomen van particuliere huishoudens bestaat uit het bruto-inkomen verminderd met: 
+- betaalde inkomensoverdrachten, zoals alimentatie van de ex-echtgeno(o)t(e);
+- premies inkomensverzekeringen zoals premies betaald voor sociale verzekeringen, volksverzekeringen en particuliere verzekeringen in verband met werkloosheid, arbeidsongeschiktheid en ouderdom en nabestaanden;
+- premies ziektekostenverzekeringen;
+- belastingen op inkomen en vermogen.
+
+Het betreft voorlopige cijfers.
+",,"Double","%",1,"Impossible","Relative"
+"Cbs.OData.Topic",109,79,105,"Topic","HuishoudensMetEenLaagInkomen_79","Huishoudens met een laag inkomen","Bij de bepaling van laag inkomen is van de particuliere huishoudens een aantal groepen niet meegenomen. Dit betreft enerzijds studentenhuishoudens en anderzijds huishoudens met een onvolledig jaarinkomen. De doelpopulatie bestaat dan ook uit particuliere huishoudens waarvan de hoofdkostwinner (of eventuele partner) het gehele jaar inkomen heeft en niet afhankelijk is van studiefinanciering.
+
+Om te bepalen of een huishouden een laag inkomen heeft, wordt het inkomen van een huishouden omgerekend tot het gestandaardiseerde inkomen (exclusief eventueel ontvangen huurtoeslag). Vervolgens wordt dit gestandaardiseerde inkomen (met het prijsindexcijfer) herleid naar het prijspeil in 2000. Het resulterende gestandaardiseerde en gedefleerde inkomen is laag wanneer het minder is dan 9249 euro. Deze grens komt ongeveer overeen met de koopkracht van een bijstandsuitkering voor een alleenstaande in 1979 toen deze op zijn hoogst was. 
+Het percentage is vermeld bij minimaal 100 particuliere huishoudens behorende tot de doelpopulatie per regio.
+
+Het betreft voorlopige cijfers.
+",,"Double","%",1,"Impossible","Relative"
+"Cbs.OData.Topic",110,80,105,"Topic","HuishOnderOfRondSociaalMinimum_80","Huish. onder of rond sociaal minimum","Huishoudens onder of rond het sociaal minimum.
+Bij de bepaling van het sociaal minimum is van de particuliere huishoudens een aantal groepen niet meegenomen. Dit betreft enerzijds studentenhuishoudens en anderzijds huishoudens met een onvolledig jaarinkomen. De doelpopulatie bestaat dan ook uit particuliere huishoudens waarvan de hoofdkostwinner (of eventuele partner) het gehele jaar inkomen heeft en niet afhankelijk is van studiefinanciering.
+
+Het sociaal minimum is het wettelijk bestaansminimum zoals dat in de politieke besluitvorming is vastgesteld. Om te kunnen beoordelen hoe het inkomen zich verhoudt tot het minimum, is aan de hand van de regelgeving vastgesteld welke norm voor het desbetreffende huishouden van toepassing is. De norm voor een (echt)paar met uitsluitend minderjarige kinderen is bijvoorbeeld gelijkgesteld aan de bijstandsuitkering van een echtpaar, aangevuld met de (leeftijdsafhankelijke) kinderbijslag. Bij 65-plussers is het bedrag aan AOW-pensioen als norm gekozen.
+Het waargenomen inkomen van huishoudens, die uitsluitend op een bijstandsuitkering zijn aangewezen, wijkt in veel gevallen in geringe mate af van de vastgestelde normbedragen. Zouden de normbedragen als inkomensgrens worden gehanteerd, dan komt een deel van deze huishoudens met hun inkomen net boven het sociale minimum uit. Daarom is niet 100%, maar 101% van het sociaal minimum als inkomensgrens gehanteerd.
+Het percentage is vermeld bij minimaal 100 particuliere huishoudens behorende tot de doelpopulatie per regio.
+
+Het betreft voorlopige cijfers.
+",,"Double","%",1,"Impossible","Relative"
+"Cbs.OData.Topic",111,81,105,"Topic","HuishoudensTot110VanSociaalMinimum_81","Huishoudens tot 110% van sociaal minimum","Het besteedbaar huishoudensinkomen exclusief gebonden uitkeringen is lager dan 110 procent van het sociaal minimum. Het sociaal minimum is het wettelijk bestaansminimum dat in de politieke besluitvorming is vastgesteld. Tot aan de pensioengerechtigde leeftijd is het sociaal minimum gelijk aan de hoogte van de bijstandsuitkering en vanaf de pensioengerechtigde leeftijd is het ontleend aan het AOW-pensioen. Voor huishoudens met kinderen zijn de kinderbijslag en het kindgebonden budget aan het normbedrag toegevoegd.
+
+Het betreft voorlopige cijfers.
+",,"Double","%",1,"Impossible","Relative"
+"Cbs.OData.Topic",112,82,105,"Topic","HuishoudensTot120VanSociaalMinimum_82","Huishoudens tot 120% van sociaal minimum","Het besteedbaar huishoudensinkomen exclusief gebonden uitkeringen is lager dan 120 procent van het sociaal minimum. Het sociaal minimum is het wettelijk bestaansminimum dat in de politieke besluitvorming is vastgesteld. Tot aan de pensioengerechtigde leeftijd is het sociaal minimum gelijk aan de hoogte van de bijstandsuitkering en vanaf de pensioengerechtigde leeftijd is het ontleend aan het AOW-pensioen. Voor huishoudens met kinderen zijn de kinderbijslag en het kindgebonden budget aan het normbedrag toegevoegd.
+
+Het betreft voorlopige cijfers.
+",,"Double","%",1,"Impossible","Relative"
+"Cbs.OData.Topic",113,83,105,"Topic","MediaanVermogenVanParticuliereHuish_83","Mediaan vermogen van particuliere huish.","De mediaan is het middelste getal wanneer alle getallen van laag naar hoog worden gesorteerd. Vermogen is het saldo van bezittingen en schulden. Bezittingen worden gevormd door bank- en spaartegoeden, effecten, de eigen woning, overig onroerend goed, ondernemingsvermogen, aanmerkelijk belang en de overige bezittingen. De schulden omvatten onder meer schulden ten behoeve van een eigen woning en consumptief krediet.
+
+Het betreft voorlopige cijfers.
+",,"Double","x 1 000 euro",1,"Missing","Relative"
+"Cbs.OData.TopicGroup",114,,,"TopicGroup","","Sociale zekerheid","Deze variabelen geven per gemeente, wijk en buurt inzicht in het aantal personen dat een uitkering ontvangt op grond van arbeidsongeschiktheid, bijstand, werkloosheid en ouderdom.
+Het is mogelijk dat een persoon aanspraak maakt op meer dan één uitkering. Dat kunnen uitkeringen zijn van eenzelfde soort (bijvoorbeeld twee uitkeringen op grond van de Wet op de arbeidsongeschiktheidsverzekering (WAO)) of twee uitkeringen van verschillende soort (zoals een uitkering op grond van de Werkloosheidswet en een bijstandsuitkering). In het laatste geval wordt de persoon bij beide soorten uitkeringen meegeteld, in het eerste geval slechts één keer (bij de WAO).
+
+Op het gebied van sociale zekerheid vinden er regelmatig revisies plaats. Via het thema sociale zekerheid in StatLine vindt u altijd de meest recente cijfers.   
+
+",,,,,,
+"Cbs.OData.Topic",115,84,114,"Topic","PersonenPerSoortUitkeringBijstand_84","Personen per soort uitkering; Bijstand","Personen die een bijstandsuitkering op grond van de Participatiewet ontvangen.
+Personen met een uitkering die verblijven in een instelling, de elders verzorgden, zijn niet inbegrepen. Ook dak- en thuislozen met bijstand zijn niet inbegrepen. De cijfers zijn standcijfers op de laatste dag van verslagmaand december.
+
+Participatiewet
+De Participatiewet vervangt sinds 1 januari 2015 de Wet werk en bijstand (WWB), de Wet Sociale Werkvoorziening (WsW) en een groot deel van de Wet werk en arbeidsondersteuning jonggehandicapten (wet Wajong).De Participatiewet komt vrijwel overeen met de WWB, maar nog sterker wordt de nadruk gelegd op participatie aan het arbeidsproces.
+De wet regelt in Nederland de ondersteuning bij arbeidsinschakeling en het verlenen van bijstand door gemeenten voor mensen die weinig of geen ander inkomen (waaronder andere uitkeringen) hebben en ook weinig of geen vermogen. Gemeenten voeren de wet uit en bepalen, binnen de wettelijke grenzen, hun eigen beleid.
+
+Het betreft voorlopige cijfers.
+
+Op het gebied van sociale zekerheid vinden er regelmatig revisies plaats. Via het thema sociale zekerheid in StatLine vindt u altijd de meest recente cijfers.   
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",116,85,114,"Topic","PersonenPerSoortUitkeringAO_85","Personen per soort uitkering; AO","Personen die een arbeidsongeschiktheidsuitkering ontvangen op grond van de Wet op de arbeidsongeschiktheidsverzekering (WAO), de Wet arbeidsongeschiktheidsverzekering zelfstandigen (WAZ), Wet werk en arbeidsondersteuning jonggehandicapten (wet Wajong) en de Wet werk en Inkomen naar arbeidsvermogen (WIA). De cijfers zijn standcijfers op de laatste dag van verslagmaand december.
+
+Wet op de arbeidsongeschiktheidsverzekering (WAO)
+Wet die als doel heeft om personen in loondienst te verzekeren van een loonvervangende uitkering bij langdurige arbeidsongeschiktheid. De WAO is met ingang van 29 december 2005 vervangen door de Wet werk en inkomen naar arbeidsvermogen (WIA), maar blijft bestaan voor mensen die al een WAO-uitkering hadden of binnen 5 jaar na het beëindigen van de uitkering opnieuw arbeidsongeschikt worden door dezelfde oorzaak.
+
+Wet arbeidsongeschiktheidsverzekering zelfstandigen (WAZ)
+Een verplichte verzekering voor zelfstandigen, beroepsbeoefenaren, directeuren-grootaandeelhouders en meewerkende echtgenoten tegen de financiële gevolgen van langdurige arbeidsongeschiktheid. 
+De WAZ is met ingang van 1 augustus 2004 geblokkeerd, maar blijft bestaan voor mensen die al een WAZ-uitkering hadden.
+
+Wet werk en arbeidsondersteuning jonggehandicapten (wet Wajong)
+Wettelijke voorziening in de financiële gevolgen van langdurige arbeidsongeschiktheid van mensen die geen aanspraak kunnen maken op de WAO/WIA omdat er geen arbeidsverleden is opgebouwd. 
+Dit zijn mensen die arbeidsongeschikt zijn voor de dag dat zij 17 jaar worden of na hun 17e jaar arbeidsongeschikt worden en een opleiding of studie volgen.
+
+Met ingang van 1 januari 2010 is de Wet werk en arbeidsondersteuning jonggehandicapten (Wet Wajong) in werking getreden, ter vervanging van de oude Wajong. 
+In tegenstelling tot de 'oude' Wajong hebben jongeren met een ziekte of handicap in de eerste plaats recht op hulp bij het vinden en houden van werk. Daaraan gekoppeld kunnen ze een inkomensondersteuning krijgen. De 'oude' Wajong blijft gelden voor jongeren die voor 1 januari 2010 een uitkering hebben aangevraagd.
+
+Wet werk en inkomen naar arbeidsvermogen (WIA)
+De wet geeft werknemers die na een wachttijd van twee jaar nog minstens 35 procent arbeidsongeschikt zijn, recht op een uitkering.
+De wet is zo opgezet dat een persoon gestimuleerd wordt om naar vermogen te werken.
+De WIA kent twee regelingen: de regeling inkomensvoorziening volledig arbeidsongeschikten (IVA) en de regeling werkhervatting gedeeltelijk arbeidsgeschikten (WGA).
+De IVA regelt een loonvervangende uitkering voor werknemers die volledig en duurzaam arbeidsongeschikt zijn.
+De WGA regelt een aanvulling op het met arbeid verdiende inkomen of een minimumuitkering als men niet of onvoldoende werkt.
+
+Het betreft voorlopige cijfers.
+
+Op het gebied van sociale zekerheid vinden er regelmatig revisies plaats. Via het thema sociale zekerheid in StatLine vindt u altijd de meest recente cijfers.
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",117,86,114,"Topic","PersonenPerSoortUitkeringWW_86","Personen per soort uitkering; WW","Personen die een uitkering ontvangen op grond van de Werkloosheidswet (WW). De cijfers zijn standcijfers op de laatste dag van verslagmaand december.
+
+Werkloosheidswet (WW)
+De wet heeft tot doel werknemers te verzekeren tegen de financiële gevolgen van werkloosheid. 
+De wet voorziet in een uitkering die gerelateerd is aan het laatstverdiende inkomen uit dienstbetrekking. De duur van de uitkering is afhankelijk van het arbeidsverleden van de verzekerde. Het Uitvoeringsinstituut Werknemersverzekeringen (UWV) beoordeelt of men voor een WW-uitkering in aanmerking komt.
+
+Het betreft voorlopige cijfers.
+
+Op het gebied van sociale zekerheid vinden er regelmatig revisies plaats. Via het thema sociale zekerheid in StatLine vindt u altijd de meest recente cijfers.   
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",118,87,114,"Topic","PersonenPerSoortUitkeringAOW_87","Personen per soort uitkering; AOW","Het aantal personen dat een uitkering ontvangt in het kader van de Algemene ouderdomswet (AOW). De cijfers zijn standcijfers op de laatste dag van verslagmaand december.
+
+Algemene Ouderdomswet (AOW)
+De AOW is een algemene, de gehele bevolking omvattende, verplichte verzekering die personen vanaf de AOW-gerechtigde leeftijd een inkomen garandeert. In het Nederlandse sociale zekerheidsstelsel is dit een volksverzekering. 
+In principe is iedereen die nog niet de AOW-gerechtige leeftijd heeft bereikt en in Nederland woont, verzekerd voor de AOW. 
+Ook degenen die niet in Nederland wonen, maar in Nederland in dienstbetrekking arbeid verrichten waarover loonbelasting wordt betaald, zijn verzekerd. 
+Voor perioden die men in het buitenland woont, kan men zich verzekeren tegen verlies van aanspraak op een AOW-uitkering. 
+Een uitkering kan, binnen het kader van de wet Beperking export uitkeringen (wet BEU), naar het buitenland worden overgemaakt.
+
+AOW-gerechtigde leeftijd (AOW-leeftijd) 
+De AOW-leeftijd is de leeftijd waarop het AOW-pensioen ingaat. De AOW-leeftijd is tot en met 2024 als volgt:
+
+Tot 2013: 65 jaar
+2013: 65 jaar en 1 maand
+2014: 65 jaar en 2 maanden
+2015: 65 jaar en 3 maanden
+2016: 65 jaar en 6 maanden
+2017: 65 jaar en 9 maanden
+2018: 66 jaar 
+2019-2021: 66 jaar en 4 maanden. 
+2022: 66 jaar en 7 maanden
+2023: 66 jaar en 10 maanden
+2024: 67 jaar.
+
+Na 2024 zal de AOW-leeftijd niet 1 jaar stijgen per jaar dat we langer leven, maar 8 maanden. De AOW-leeftijd blijft dus gekoppeld aan de levensverwachting, maar in mindere mate.
+
+Het betreft voorlopige cijfers.
+
+Op het gebied van sociale zekerheid vinden er regelmatig revisies plaats. Via het thema sociale zekerheid in StatLine vindt u altijd de meest recente cijfers.   
+
+
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",119,,,"TopicGroup","","Zorg","Deze variabelen geven per gemeente, wijk en buurt inzicht in het aantal personen dat gebruik maakte van jeugdzorg in natura en/of een maatwerkarrangement in het kader van de Wet maatschappelijke ondersteuning.
+
+De cijfers zijn afgerond op vijftallen. Om het risico op onthulling van individuen te voorkomen zijn de waarden 0 tot en met 7 weergegeven als geheim. Hierdoor kan het voorkomen, dat de som van de detailgegevens afwijkt van het totaal.
+",,,,,,
+"Cbs.OData.Topic",120,88,119,"Topic","JongerenMetJeugdzorgInNatura_88","Jongeren met jeugdzorg in natura","Personen tot 23 jaar die op enig moment in de verslagperiode gebruik gemaakt hebben van jeugdhulp in natura, jeugdbescherming of jeugdreclassering. 
+
+Jeugdhulp in natura is hulp en zorg zoals deze bedoeld en beschreven is in de Jeugdwet, en in natura door de zorgaanbieder is geleverd. PGB gefinancierde hulp en zorg valt hier dus buiten. Het betreft hulp en zorg aan jongeren en hun ouders bij psychische, psychosociale en/of gedragsproblemen, een verstandelijke beperking van de jongere, of opvoedingsproblemen van de ouders. De hulp is bedoeld voor kinderen en jongeren tot 18 jaar en kan verlengd worden tot 23 jaar. Als de jongere overnacht bij de jeugdhulpinstelling, het pleeggezin of het gezinshuis, is er sprake van jeugdhulp met verblijf.
+
+Jeugdhulp in natura wordt direct vergoed  aan de zorgverlener zonder tussenkomst van de zorggebruiker. In het kader van de jeugdzorg betekent dit dat de hulp rechtstreeks door de gemeente wordt vergoed.
+
+Persoonsgebonden budget (PGB) is een geldbedrag waarmee de zorggebruiker zelf zorg, begeleiding, hulp, hulpmiddelen of voorzieningen in kan kopen. Deze wordt verstrekt via de Sociale verzekeringsbank (SVB) maar is ook afkomstig van de gemeente.
+
+Jeugdbescherming is een maatregel die de rechter dwingend oplegt. Het doel van de kinderbeschermingsmaatregelen is het opheffen van de bedreiging voor de veiligheid en ontwikkeling van het kind. Een kind of jongere wordt dan 'onder toezicht gesteld' of ‘onder voogdij geplaatst’.
+
+Jeugdreclassering is een combinatie van toezicht en begeleiding en controle voor jongeren vanaf 12 jaar, die voor hun 18e verjaardag met de politie of leerplichtambtenaar in aanraking zijn geweest en een proces-verbaal hebben gekregen. Bij jongvolwassenen in de leeftijd van 18 tot en met 22 jaar kan ook het jeugdstrafrecht toegepast worden op grond van het adolescentenstrafrecht, indien het ontwikkelingsniveau van de dader daartoe aanleiding geeft.  De jongere krijgt op maat gesneden begeleiding van een jeugdreclasseringswerker om te voorkomen dat hij of zij opnieuw de fout ingaat. Jeugdreclassering kan worden opgelegd door de kinderrechter of het openbaar ministerie. Jeugdreclassering kan ook op initiatief van de Raad voor de Kinderbescherming in het vrijwillige kader worden opgestart.
+
+Indeling naar gemeente, wijk en buurt
+De indeling naar gemeente en wijk is gebaseerd op het adres van de gezagsdrager van de jongere. Er is uitgegaan van het woonplaatsbeginsel zoals dat is toegepast in de Jeugdwet die vanaf 2015 in werking is getreden. Wanneer het adres gedurende de verslagperiode is gewijzigd krijgt de jongere in deze tabel het meest recente adres toegewezen.
+Voor sommige jongeren is alleen de gemeente volgens woonplaatsbeginsel bekend, maar niet het specifieke adres. In deze gevallen wordt de jongere wel meegeteld in het totaal voor de gemeente, maar niet in één van de onderliggende wijken. Hierdoor kan het voorkomen dat de cijfers van de wijken binnen een gemeente niet optellen tot het totaal van de gemeente.
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",121,89,119,"Topic","PercentageJongerenMetJeugdzorg_89","Percentage jongeren met jeugdzorg","Percentage van personen tot 23 jaar die op enig moment in de verslagperiode gebruik gemaakt hebben van jeugdhulp, jeugdbescherming of jeugdreclassering. ",,"Double","%",1,"Impossible","Relative"
+"Cbs.OData.Topic",122,90,119,"Topic","WmoClienten_90","Wmo-cliënten","Aantal personen dat ten minste één maatwerkarrangement in het kader van de Wet maatschappelijke ondersteuning (Wmo) heeft gehad. Deze cijfers zijn samengesteld op basis van gegevens die gemeenten aan CBS hebben geleverd in het kader van de Gemeentelijke Monitor Sociaal Domein. 
+
+Maatwerkarrangement
+Ondersteuning binnen het kader van de Wmo2015 geleverd in de vorm van een product of dienst die is afgestemd op de wensen, persoonskenmerken mogelijkheden en behoeften van een individu.
+
+Wmo2015
+Wet maatschappelijke ondersteuning zoals ingegaan op 1 januari 2015. Deze wet stelt gemeenten verantwoordelijk voor het ondersteunen van de zelfredzaamheid en participatie van mensen met een beperking, chronische psychische of psychosociale problemen. 
+
+Regio
+Alleen de gegevens van gemeenten die aangeleverd hebben en die toestemming hebben gegeven voor publicatie worden gepubliceerd. Gemeenten kunnen daarbij apart toestemming geven voor de basisvariabelen Wmo en de facultatieve variabelen Wmo. Als gemeenten herlevering doen over eerdere verslagperioden, is de toestemming voor publicatie zoals die bij de herlevering is gegeven, leidend.
+
+De cijfers over het totaal aantal cliënten in Nederland zijn geschat met een regressiemodel op de data van de deelnemende gemeenten. Voor meer informatie over deze methode wordt verwezen naar de onderzoeksbeschrijving Gemeentelijke monitor sociaal domein, Wmo.
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",123,91,119,"Topic","WmoClientenRelatief_91","Wmo-cliënten relatief","Het aantal Wmo-cliënten per 1000 inwoners dat ten minste één maatwerkarrangement in het kader van de Wet maatschappelijke ondersteuning (Wmo) heeft gehad. De relatieve cijfers zijn berekend na het afronden van de absolute cijfers.",,"Long","per 1 000 inwoners",0,"Impossible","Relative"
+"Cbs.OData.TopicGroup",124,,,"TopicGroup","","Bedrijfsvestigingen, SBI 2008","Bedrijfsvestigingen naar activiteit op 1 januari (SBI 2008).
+ 
+Deze tabel bevat gegevens over het aantal vestigingen van bedrijven naar economische activiteit, gebaseerd op de Standaard Bedrijfsindeling 2008 (SBI 2008). De vestigingen zijn voorts ingedeeld naar de gemeentelijke indeling per 1 januari van het verslagjaar, naar wijken en naar buurten. 
+
+Status van de cijfers: 
+De cijfers hebben een voorlopig karakter.
+
+Vestiging:
+Elke afzonderlijk gelegen ruimte, terrein of complex van ruimten of terreinen, benut door een bedrijf voor uitoefening van de activiteiten. Ieder bedrijf bestaat uit ten minste één vestiging. Meerdere locaties van een bedrijf binnen één postcodegebied worden als één vestiging beschouwd.
+
+Standaard Bedrijfsindeling 2008 (SBI 2008): 
+De Nederlandse hiërarchische indeling van economische activiteiten die door het CBS wordt gebruikt om bedrijfseenheden in te delen naar hun hoofdactiviteit. De SBI 2008 is de versie die vanaf 2008 gebruikt wordt.
+
+In deze tabel is gekozen voor de hoofdactiviteit (SBI) van de vestiging. Niet iedere vestiging van een bedrijf houdt zich bezig met de hoofdactiviteit (SBI) van het bedrijf als geheel. Om te weten welke activiteiten worden uitgevoerd in een regio is de hoofdactiviteit (SBI) van de vestiging gebruikt. In de tabel zijn de vestigingen (naast de totalen) ook naar de volgende acht sectoren onderverdeeld:
+A  Landbouw, bosbouw en visserij
+B-F  Nijverheid en energie
+G+I  Handel en horeca
+H+J  Vervoer, informatie en communicatie
+K-L  Financiële diensten, onroerend goed
+M-N  Zakelijke dienstverlening 
+O-Q Overheid, onderwijs en zorg
+R-U  Cultuur, recreatie, overige diensten
+
+Het aantal vestigingen is afgerond op een veelvoud van vijf. In geval van afrondingen kan het voorkomen, dat de totalen niet precies overeenstemmen met de som der opgetelde getallen. 
+In geval de wijk of buurt van het bedrijf onbekend is, wordt dit bedrijf alleen op gemeentelijk niveau meegeteld. De onderverdeling naar sectoren is alleen vermeld bij 20 of meer bedrijven per buurt.
+",,,,,,
+"Cbs.OData.Topic",125,92,124,"Topic","BedrijfsvestigingenTotaal_92","Bedrijfsvestigingen totaal","Het betreft voorlopige cijfers.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",126,,124,"TopicGroup","","Bedrijfsvestigingen naar activiteit",,,,,,,
+"Cbs.OData.Topic",127,93,126,"Topic","ALandbouwBosbouwEnVisserij_93","A Landbouw, bosbouw en visserij","Het betreft voorlopige cijfers.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",128,94,126,"Topic","BFNijverheidEnEnergie_94","B-F Nijverheid en energie","Het betreft voorlopige cijfers.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",129,95,126,"Topic","GIHandelEnHoreca_95","G+I Handel en horeca","Het betreft voorlopige cijfers.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",130,96,126,"Topic","HJVervoerInformatieEnCommunicatie_96","H+J Vervoer, informatie en communicatie","Het betreft voorlopige cijfers.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",131,97,126,"Topic","KLFinancieleDienstenOnroerendGoed_97","K-L Financiële diensten, onroerend goed","Het betreft voorlopige cijfers.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",132,98,126,"Topic","MNZakelijkeDienstverlening_98","M-N Zakelijke dienstverlening","Het betreft voorlopige cijfers.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",133,99,126,"Topic","OQOverheidOnderwijsEnZorg_99","O-Q Overheid, onderwijs en zorg","Het betreft voorlopige cijfers",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.Topic",134,100,126,"Topic","RUCultuurRecreatieOverigeDiensten_100","R-U Cultuur, recreatie, overige diensten","Het betreft voorlopige cijfers.",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",135,,,"TopicGroup","","Motorvoertuigen","De motorvoertuigen betreffen personenauto's, bedrijfsauto’s en motortweewielers op 1 januari. Tot en met 2018 werden ook enkele niet-verzekerde voertuigen meegenomen. Vanaf 2019 zijn de cijfers berekend op basis van een nieuwe verbeterde selectiemethode, waarbij alleen voertuigen zijn meegenomen die op basis van verzekering deel mochten nemen aan het verkeer.
+Aanhangwagens en opleggers zijn niet meegerekend.
+De gegevens zijn ontleend aan de Statistiek van de Motorvoertuigen. Deze gegevens zijn gebaseerd op de kentekenregistratie van de Rijksdienst voor het Wegverkeer (RDW). Met behulp van deze registratie zijn tellingen gemaakt van alle voertuigen met actuele, houderschapsplichtige kentekens die op 1 januari in het kentekenbestand voorkomen.
+Het aantal geregistreerde motorvoertuigen is inclusief voertuigen van lease- en verhuurbedrijven. Deze motorvoertuigen staan geregistreerd op het adres van het lease- of verhuurbedrijf. De motorvoertuigen die staan ingeschreven op postbusadressen zijn niet meegeteld bij de aantallen van de wijken en buurten, maar wel in de gemeentelijke totalen. De wijken en buurten tellen daarom niet altijd op tot gemeenten. De gemeentelijke totalen komen overeen met de Regionale Kerncijfers Nederland.
+",,,,,,
+"Cbs.OData.TopicGroup",136,,135,"TopicGroup","","Personenauto's",,,,,,,
+"Cbs.OData.Topic",137,101,136,"Topic","PersonenautoSTotaal_101","Personenauto's totaal","Personenauto
+Motorvoertuig voor personenvervoer over de weg, exclusief brom- en motorfietsen, met maximaal negen zitplaatsen (met inbegrip van de bestuurdersplaats).
+
+Hieronder vallen personenauto's, bestelwagens ontworpen voor en voornamelijk gebruikt voor het vervoer van reizigers, taxi's, huurauto's, ziekenwagens en campers. Lichte wegvoertuigen voor goederenvervoer over de weg, touringcars, autobussen en minibussen vallen hier niet onder.
+Het begrip personenauto omvat ook taxi's en huurauto's met minder dan tien zitplaatsen. Vanaf 1 mei 2009 worden campers gekentekend als personenauto of als bus afhankelijk van het aantal zitplaatsen. Vóór die datum zijn campers geregistreerd als speciale voertuigen.
+
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",138,,136,"TopicGroup","","Personenauto's; brandstoftype",,,,,,,
+"Cbs.OData.Topic",139,102,138,"Topic","PersonenautoSBrandstofBenzine_102","Personenauto's; brandstof benzine","Het aantal personenauto's rijdend op benzine.",,"Long","aantal",0,"Missing","Absolute"
+"Cbs.OData.Topic",140,103,138,"Topic","PersonenautoSOverigeBrandstof_103","Personenauto's; overige brandstof","Het aantal personenauto's met overige brandstof. Hieronder vallen: diesel, LPG, elektriciteit (incl. Hybride), waterstof, alcohol, LNG en CNG.",,"Long","aantal",0,"Missing","Absolute"
+"Cbs.OData.Topic",141,104,136,"Topic","PersonenautoSPerHuishouden_104","Personenauto's per huishouden","Het aantal personenauto's per (particulier) huishouden op 1 januari. De personenauto's worden regionaal ingedeeld met behulp van de kentekenregistratie. Personenauto's die geregistreerd staan op het adres van het lease- of verhuurbedrijf vertekenen daarom de autodichtheid per huishouden. Zie de tabeltoelichting voor een verwijzing naar een andere StatLinetabel met cijfers waarin de voertuigen op naam van rechtspersonen (bedrijven) buiten beschouwing zijn gelaten, om deze vertekening van de cijfers door grote verhuur- en leasebedrijven te voorkomen. Het aantal personenauto's per huishouden is vermeld bij minimaal 50 huishoudens en bij een waarde van maximaal 2,5 personenauto’s per huishouden.",,"Double","per huishouden",1,"Impossible","Absolute"
+"Cbs.OData.Topic",142,105,136,"Topic","PersonenautoSNaarOppervlakte_105","Personenauto's naar oppervlakte","Het aantal personenauto's per km² land op 1 januari. De personenauto's worden regionaal ingedeeld met behulp van de kentekenregistratie. Personenauto's die geregistreerd staan op het adres van het lease- of verhuurbedrijf vertekenen daarom de autodichtheid per oppervlakte. Zie de tabeltoelichting voor een verwijzing naar een andere StatLinetabel met cijfers waarin de voertuigen op naam van rechtspersonen (bedrijven) buiten beschouwing zijn gelaten, om deze vertekening van de cijfers door grote verhuur- en leasebedrijven te voorkomen. Het aantal personenauto's naar oppervlakte is vermeld als ook het aantal personenauto's per huishouden is gepubliceerd. Dat is bij minimaal 50 huishoudens en bij een waarde van maximaal 2,5 personenauto’s per huishouden.",,"Long","per km²",0,"Impossible","Relative"
+"Cbs.OData.Topic",143,106,135,"Topic","Motorfietsen_106","Motorfietsen","Motorfiets
+Voertuig voor het wegverkeer op twee, drie of vier wielen met een onbeladen gewicht van maximaal 400 kg. Dergelijke motorvoertuigen met een cilinderinhoud van meer dan 50 cm³ vallen hieronder, alsook motorvoertuigen met een cilinderinhoud van minder dan 50 cm³ die niet aan de definitie van bromfiets beantwoorden.
+
+",,"Long","aantal",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",144,,,"TopicGroup","","Nabijheid voorzieningen","Locatie die bezocht kan worden door personen. De locatie sluit aan bij het gebruik in het dagelijks leven.
+
+De afstand tot een voorziening is berekend over verharde, door auto's te gebruiken wegen, dus niet over fiets- en voetpaden. Overtochten via veerboten zijn hierbij inbegrepen. Er wordt geen rekening gehouden met éénrichtingsverkeer en overige inrijverboden van toegangswegen tot rijks- of provinciale wegen.
+
+",,,,,,
+"Cbs.OData.Topic",145,107,144,"Topic","AfstandTotHuisartsenpraktijk_107","Afstand tot huisartsenpraktijk","De gemiddelde afstand van alle inwoners in een gebied tot de dichtstbijzijnde huisartsenpraktijk, berekend over de weg. 
+.
+De gemiddelde afstand is opgenomen wanneer van 90 procent of meer van de inwoners in de buurt de exacte ligging (x,y-coördinaat) van het adres kon worden vastgesteld. Daarnaast geldt dat het gemiddelde alleen is vermeld bij minimaal 10 inwoners per buurt.
+
+Huisartsenpraktijk: Pand of ruimte waarin een of meer huisartsen (samen) werken.
+
+Huisarts:
+De huisarts is verantwoordelijk voor de algemene medische zorg. Hij/zij geeft persoonlijke en continue zorg aan een vaste praktijkpopulatie.
+",,"Double","km",1,"Impossible","Absolute"
+"Cbs.OData.Topic",146,108,144,"Topic","AfstandTotGroteSupermarkt_108","Afstand tot grote supermarkt","De gemiddelde afstand van alle inwoners in een gebied tot de dichtstbijzijnde grote supermarkt, berekend over de weg.
+
+De gemiddelde afstand is opgenomen wanneer van 90 procent of meer van de inwoners in de buurt de exacte ligging (x,y-coördinaat) van het adres kon worden vastgesteld. Daarnaast geldt dat het gemiddelde alleen is vermeld bij minimaal 10 inwoners per buurt.
+
+Grote supermarkt:
+Winkel met meerdere soorten dagelijkse artikelen en een minimale oppervlakte van 150 m2.
+",,"Double","km",1,"Impossible","Absolute"
+"Cbs.OData.Topic",147,109,144,"Topic","AfstandTotKinderdagverblijf_109","Afstand tot kinderdagverblijf","De gemiddelde afstand van alle inwoners in een gebied tot het dichtstbijzijnde kinderdagverblijf, berekend over de weg. 
+.
+De gemiddelde afstand is opgenomen wanneer van 90 procent of meer van de inwoners in de buurt de exacte ligging (x,y-coördinaat) van het adres kon worden vastgesteld. Daarnaast geldt dat het gemiddelde alleen is vermeld bij minimaal 10 inwoners per buurt.
+
+Kinderdagverblijf:
+Plaats waar kinderen van 0 tot 4 jaar gedurende één of meer dagdelen per week het hele jaar door worden opgevangen. Er kan voor meer dan 5 uur per dag van het kinderdagverblijf gebruik gemaakt worden en voor maximaal 10 dagdelen per week.
+",,"Double","km",1,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",148,,144,"TopicGroup","","Basisonderwijs","Het basisonderwijs omvat naast de reguliere basisscholen ook de scholen voor kinderen van mensen zonder vaste woon- of verblijfplaats, de zogenaamde rijdende scholen en de ligplaatsscholen voor varende kleuters. Het speciaal basisonderwijs en de speciale scholen zijn niet meegenomen.
+
+In Nederland zijn er ongeveer 10 rijdende scholen. Deze scholen hebben allen als officiële vestigingsgemeente Geldermalsen. Het aantal basisscholen in Geldermalsen is hierdoor hoog, vooral in het oostelijke deel. Ook in buurten van de omliggende gemeenten Buren, Culemborg en Neerijnen is het effect van deze scholen nog zichtbaar.
+
+De cijfers vermeld bij het jaar:
+- 2023 betreffen schooljaar 2022/'23.
+
+De cijfers zijn gebaseerd op het adressenbestand van het Ministerie van Onderwijs, Cultuur en Wetenschap met vestigingen van basisscholen. Als bekend is dat er onderwijs gevolgd kan worden op een dependance en dit een effect heeft van meer dan 500 meter op de berekende gemiddelde afstand, zijn deze gegevens van de buurten en wijken aanvullend geheim gemaakt.
+",,,,,,
+"Cbs.OData.Topic",149,110,148,"Topic","AfstandTotSchool_110","Afstand tot school","De gemiddelde afstand van alle inwoners in een gebied tot de dichtstbijzijnde school, berekend over de weg. 
+
+De gemiddelde afstand is opgenomen wanneer van 90 procent of meer van de inwoners in de buurt de exacte ligging (x,y-coördinaat) van het adres kon worden vastgesteld. Daarnaast geldt dat het gemiddelde alleen is vermeld bij minimaal 10 inwoners per buurt.
+",,"Double","km",1,"Impossible","Absolute"
+"Cbs.OData.Topic",150,111,148,"Topic","ScholenBinnen3Km_111","Scholen binnen 3 km","Het gemiddeld aantal scholen binnen 3 kilometer over de weg voor alle inwoners van een gebied.
+
+Het gemiddelde aantal is opgenomen wanneer van 90 procent of meer van de inwoners in de buurt de exacte ligging (x,y-coördinaat) van het adres kon worden vastgesteld. Daarnaast geldt dat het gemiddelde alleen is vermeld bij minimaal 10 inwoners per buurt.
+",,"Double","aantal",1,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",151,,,"TopicGroup","","Oppervlakte","Voor de bepaling van oppervlaktecijfers is gebruik gemaakt van het digitale wijk- en buurtgrenzenbestand van het CBS. 
+
+Met totale oppervlakte per gemeente wordt de oppervlakte inclusief het gemeentelijk ingedeeld buitenwater bedoeld. Bij oppervlaktecijfers over wijken en buurten is de oppervlakte land en water opgenomen exclusief buitenwater. Door dit laatste kan de optelling van de wijken of buurten verschillen met de gepubliceerde totalen per gemeente. Deze verschillen doen zich vooral voor bij kustgemeenten.
+",,,,,,
+"Cbs.OData.Topic",152,112,151,"Topic","OppervlakteTotaal_112","Oppervlakte totaal","De totale oppervlakte is de som van de oppervlakten water en land in hele hectaren (ha.).",,"Long","ha",0,"Impossible","Absolute"
+"Cbs.OData.Topic",153,113,151,"Topic","OppervlakteLand_113","Oppervlakte land","De oppervlakte land is bepaald door het meest recente digitale bestand Bodemgebruik te combineren met het digitale bestand van gemeente-, wijk- en buurtgrenzen. 
+De arealen land en water voor het jaar 2022 en 2023 zijn gebaseerd op het Bestand Bodemgebruik 2017 (BBG2017). 
+De arealen land en water voor de jaren 2020 en 2021 zijn gebaseerd op het Bestand Bodemgebruik 2015 (BBG2015). Zowel in BBG2017 als in BBG2015 is daarbij rekening gehouden met de wijzigingen in de landsgrens tussen Nederland en België bij Maastricht en Eijsden per 1-1-2018.
+
+De oppervlakte land wordt uitgedrukt in hele hectaren (ha.).
+
+",,"Long","ha",0,"Impossible","Absolute"
+"Cbs.OData.Topic",154,114,151,"Topic","OppervlakteWater_114","Oppervlakte water","Oppervlakte water omvat zowel binnen- als buitenwater. Tot binnenwater wordt gerekend alle water niet onderhevig aan getijden, breder dan 6 meter en groter dan 1 hectare. Voorbeelden zijn het IJsselmeer, Markermeer, Randmeren, sloten, rivieren en kanalen. Onder het buitenwater valt alle water onderhevig aan getijden, zoals de Waddenzee, Oosterschelde, Westerschelde en het gemeentelijk ingedeelde gedeelte van de Noordzee.
+De oppervlakte water is bepaald door het meest recente digitale bestand Bodemgebruik te combineren met het digitale bestand van gemeente-, wijk- en buurtgrenzen.
+De arealen land en water voor het jaar 2022 en 2023 zijn gebaseerd op het Bestand Bodemgebruik 2017 (BBG2017). 
+De arealen land en water voor de jaren 2020 en 2021 zijn gebaseerd op het Bestand Bodemgebruik 2015 (BBG2015). Zowel in BBG2017 als in BBG2015 is daarbij rekening gehouden met de wijzigingen in de landsgrens tussen Nederland en België bij Maastricht en Eijsden per 1-1-2018. 
+ 
+Het buitenwater is alleen op gemeenteniveau vermeld, water per wijk of buurt bestaat alleen uit binnenwater. De oppervlakte water wordt uitgedrukt in hele hectaren (ha.).
+
+",,"Long","ha",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",155,,,"TopicGroup","","Postcode",,,,,,,
+"Cbs.OData.Topic",156,115,155,"Topic","MeestVoorkomendePostcode_115","Meest voorkomende postcode","Meest voorkomende numerieke postcode in een buurt, op grond van het aantal adressen in het Geografisch Basisregister (GBR, definitieve versie) per 1 januari.",,"String","code",0,"Impossible",""
+"Cbs.OData.Topic",157,116,155,"Topic","Dekkingspercentage_116","Dekkingspercentage","Indicatie (in zes klassen) van het percentage adressen in een buurt met de meest voorkomende postcode. Dit percentage is ontleend aan het Geografisch Basisregister (GBR, definitieve versie).
+De volgende klassenindeling is gehanteerd:
+1: > 90% van de adressen heeft dezelfde vermelde numerieke postcode;
+2: 81-90% van de adressen heeft dezelfde vermelde numerieke postcode;
+3: 71-80% van de adressen heeft dezelfde vermelde numerieke postcode;
+4: 61-70% van de adressen heeft dezelfde vermelde numerieke postcode;
+5: 51-60% van de adressen heeft dezelfde vermelde numerieke postcode;
+6: 50% of minder van de adressen heeft dezelfde vermelde numerieke postcode.
+",,"Long","code",0,"Impossible","Absolute"
+"Cbs.OData.TopicGroup",158,,,"TopicGroup","","Stedelijkheid",,,,,,,
+"Cbs.OData.Topic",159,117,158,"Topic","MateVanStedelijkheid_117","Mate van stedelijkheid","Op grond van de omgevingsadressendichtheid is aan iedere buurt, wijk of gemeente een stedelijkheidsklasse toegekend. De volgende klassenindeling is gehanteerd:
+1: zeer sterk stedelijk >= 2 500 adressen per km²
+2: sterk stedelijk 1 500 -  2 500 adressen per km²
+3: matig stedelijk 1 000 - 1 500 adressen per km²
+4: weinig stedelijk 500 - 1 000 adressen per km²
+5: niet stedelijk < 500 adressen per km²
+",,"Long","code",0,"Impossible","Absolute"
+"Cbs.OData.Topic",160,118,158,"Topic","Omgevingsadressendichtheid_118","Omgevingsadressendichtheid","De omgevingsadressendichtheid (OAD) van een buurt, wijk of gemeente is het gemiddeld aantal adressen per vierkante kilometer binnen een cirkel met een straal van één kilometer op 1 januari.
+De OAD beoogt de mate van concentratie van menselijke activiteiten (wonen, werken, schoolgaan, winkelen, uitgaan etc.) weer te geven. Het CBS gebruikt de OAD om de stedelijkheid van een bepaald gebied te bepalen.
+Voor de berekening hiervan wordt eerst voor ieder adres de OAD vastgesteld. Daarna is het gemiddelde berekend van de omgevingsadressendichtheden van alle afzonderlijke adressen binnen het beschouwde gebied. De adressen zijn afkomstig uit het Geografisch Basisregister van het betreffende jaar (definitieve versie). Dit register bevat alle adressen van Nederland die zijn voorzien van een postcode, gemeentecode en wijk- en buurtcode.
+",,"Long","per km²",0,"Impossible","Relative"

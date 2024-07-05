@@ -1,0 +1,315 @@
+---
+title: "index"
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-depth: 1
+    embed-resources: true
+    # standalone: true
+    smooth-scroll: true
+    page-layout: full
+    code-fold: show
+    grid:
+      sidebar-width: 180px
+editor: source
+number-sections: false
+---
+```{r setup, echo=FALSE, message=FALSE, verbose=FALSE, results='hide', warning=FALSE}
+### Clear workspace
+# rm(list = ls())
+
+### Load dependencies
+install_and_load <- function(packages) {
+  installed_packages <- rownames(installed.packages())                                # Check installed packages
+  to_install <- packages[!(packages %in% installed_packages)]
+  if (length(to_install) > 0) {                                                       # Install missing
+    install.packages(to_install, dependencies = TRUE)
+  }
+  suppressMessages(lapply(packages, require, character.only = TRUE, quietly = TRUE))  # Load
+}
+install_and_load(c("cbsodataR", "tidyverse", "sf", "dplyr", "leaflet"))
+
+### Plotmap function
+plotmap_GM <- function(data, df_column) {
+  # Check if gemeente_2024 exists and retrieve if not
+  if (!exists("gemeente_2024")) {
+    gemeente_2024 <<- cbs_get_sf(region = "gemeente", year = "2024")
+  }
+  
+  # trim spaces in RegioS
+  data$RegioS <- str_trim(data$RegioS)
+  
+  # Join the map with the data
+  map_with_data <- left_join(gemeente_2024, data, by = c("statcode" = "RegioS"))
+  
+  # Transform the CRS to WGS84
+  map_with_data <- st_transform(map_with_data, crs = 4326)
+  
+  # Ensure the column is numeric
+  map_with_data[[df_column]] <- as.numeric(map_with_data[[df_column]])
+  
+  # Define a color palette for the interactive map
+  valid_values <- map_with_data[[df_column]][!is.na(map_with_data[[df_column]])]
+  if (length(valid_values) == 0) {
+    stop("The specified column contains only NA values or is missing.")
+  }
+  pal <- colorNumeric(palette = "viridis", domain = valid_values, na.color = "transparent")
+  
+  # Create leaflet map
+  leaflet(map_with_data) %>%
+    addTiles() %>%
+    addPolygons(
+      fillColor = ~pal(get(df_column)),
+      weight = 1,
+      opacity = 1,
+      color = "white",
+      dashArray = "3",
+      fillOpacity = 0.7,
+      highlightOptions = highlightOptions(
+        weight = 3,
+        color = "#666",
+        dashArray = "",
+        fillOpacity = 0.7,
+        bringToFront = TRUE
+      ),
+      label = ~paste("Regio:", statnaam, "<br>",
+                     df_column, ":", get(df_column)),
+      labelOptions = labelOptions(
+        style = list("font-weight" = "normal", padding = "3px 8px"),
+        textsize = "15px",
+        direction = "auto"
+      )
+    ) %>%
+    addLegend(pal = pal, values = valid_values, opacity = 0.7, title = df_column,
+              position = "bottomright")
+}
+
+# Example usage:
+# Assuming data is your dataframe and "PersonenMetPersoonlijkInkomen_2" is the column you want to plot
+# plotmap(data, "PersonenMetPersoonlijkInkomen_2")
+
+plotmap_PV <- function(data, df_column) {
+  # Check if gemeente_2024 exists and retrieve if not
+  if (!exists("provincie_2024")) {
+    provincie_2024 <<- cbs_get_sf(region = "provincie", year = "2024")
+  }
+  
+  # trim spaces in RegioS
+  data$RegioS <- str_trim(data$RegioS)
+  
+  # Join the map with the data
+  map_with_data <- left_join(provincie_2024, data, by = c("statcode" = "RegioS"))
+  
+  # Transform the CRS to WGS84
+  map_with_data <- st_transform(map_with_data, crs = 4326)
+  
+  # Ensure the column is numeric
+  map_with_data[[df_column]] <- as.numeric(map_with_data[[df_column]])
+  
+  # Define a color palette for the interactive map
+  valid_values <- map_with_data[[df_column]][!is.na(map_with_data[[df_column]])]
+  if (length(valid_values) == 0) {
+    stop("The specified column contains only NA values or is missing.")
+  }
+  pal <- colorNumeric(palette = "viridis", domain = valid_values, na.color = "transparent")
+  
+  # Create leaflet map
+  leaflet(map_with_data) %>%
+    addTiles() %>%
+    addPolygons(
+      fillColor = ~pal(get(df_column)),
+      weight = 1,
+      opacity = 1,
+      color = "white",
+      dashArray = "3",
+      fillOpacity = 0.7,
+      highlightOptions = highlightOptions(
+        weight = 3,
+        color = "#666",
+        dashArray = "",
+        fillOpacity = 0.7,
+        bringToFront = TRUE
+      ),
+      label = ~paste("Regio:", statnaam, "<br>",
+                     df_column, ":", get(df_column)),
+      labelOptions = labelOptions(
+        style = list("font-weight" = "normal", padding = "3px 8px"),
+        textsize = "15px",
+        direction = "auto"
+      )
+    ) %>%
+    addLegend(pal = pal, values = valid_values, opacity = 0.7, title = df_column,
+              position = "bottomright")
+}
+### Load data
+data_rijvoertuigen <- read.csv2(file = "Data/data_rijvoertuigen.csv", sep=",")
+data_rijvoertuigen_GM <- read.csv2(file = "Data/data_rijvoertuigen_GM.csv", sep=",")
+data_inkomen <- read.csv2(file = "Data/data_inkomen.csv", sep=",")
+gemeente_2024 <- readRDS("Data/gemeente_2024.rds")
+data_rijbewijs <- read.csv2(file = "Data/Rijbewijs_leeftijd_PV.csv", sep=",")
+```
+
+```{r cbs_API_functions, echo=FALSE, message=FALSE, eval=FALSE}
+# toc <- cs_get_toc(cache = TRUE)
+#print(metadata$TableInfos$Summary)
+# Fetch data for dataset "85618NED"
+
+# Get metadata
+metadata <- cbs_get_meta("83488NED")
+head(metadata)
+
+# load dataset
+data <- cbs_get_data("83488NED", Perioden = "2023JJ00", RegioS=has_substring("PV"))
+
+# Write dataset
+write.csv(data_rijbewijs, file = "Data/rijbewijs_leeftijd_PV.csv", row.names = FALSE)
+```
+
+
+# Waar zijn de Wegvoertuigen? {.unnumbered}
+```{r echo=FALSE, message=FALSE}
+plotmap_GM(data_rijvoertuigen_GM, "TotaalWegvoertuigen_1")
+
+```
+
+# % Prive / Zakelijk
+```{r echo=FALSE, message=FALSE}
+data_rij <- data_rijvoertuigen_GM %>%
+  select(all_of(c("RegioS", "Perioden", "TotaalWegvoertuigen_1", "Personenauto_2", "TotaalBedrijfsvoertuigen_3")))
+data_rij$P_Prive <- round(as.numeric(data_rij$Personenauto_2) / as.numeric(data_rij$TotaalWegvoertuigen_1) * 100,0)
+data_rij$P_Zakelijk <- round(as.numeric(data_rij$TotaalBedrijfsvoertuigen_3) / as.numeric(data_rij$TotaalWegvoertuigen_1) * 100,0)
+plotmap_GM(data_rij, "P_Prive")
+plotmap_GM(data_rij, "P_Zakelijk")
+
+```
+
+
+# Wie komt in aanmerking?
+```{r echo=FALSE, message=FALSE}
+
+data <- data_inkomen %>%
+  filter(Persoonskenmerken == "Totaal")
+data$PersonenMetPersoonlijkInkomen_2 <- as.numeric(data$PersonenMetPersoonlijkInkomen_2) * 1000
+data$GemiddeldGestandaardiseerdInkomen_4 <- as.numeric(data$GemiddeldGestandaardiseerdInkomen_4) * 1000
+
+plotmap_GM(data, "PersonenMetPersoonlijkInkomen_2")
+plotmap_GM(data, "GemiddeldGestandaardiseerdInkomen_4")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r message=FALSE, echo=FALSE}
+head(metadata)
+data_rijbewijs$Rijbewijscategorie <- str_trim(data_rijbewijs$Rijbewijscategorie)
+replace_value_in_column <- function(data, column, old_value, new_value) {
+  data <- data %>%
+    mutate(!!sym(column) := if_else(!!sym(column) == old_value, new_value, !!sym(column)))
+  return(data)
+}
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "10000", "Totaal")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "53070", "16-18")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "53090", "18-20")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "70500", "20-25")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "70600", "25-30")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "60400", "30-40")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "60500", "40-50")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "60600", "50-60")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "71300", "60-65")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "71400", "65-70")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "71500", "70-75")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "21600", "75+")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "LeeftijdRijbewijshouder", "99999", "onbekend")
+
+
+
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "Rijbewijscategorie", "A028200", "Auto_totaal")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "Rijbewijscategorie", "A028201", "Auto_ex_aanhanger")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "Rijbewijscategorie", "A028202", "Auto_inc_aanhanger")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "Rijbewijscategorie", "A028203", "Bus_totaal")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "Rijbewijscategorie", "A028204", "Bus_ex_aanhanger")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "Rijbewijscategorie", "A028205", "Bus_inc_aanhanger")
+
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "Rijbewijscategorie", "A028206", "Bromfiets")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "Rijbewijscategorie", "A028207", "Motor")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "Rijbewijscategorie", "A028208", "Vrachtauto")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "Rijbewijscategorie", "A028209", "Vrachtauto_ex_aanhanger")
+data_rijbewijs <- replace_value_in_column(data_rijbewijs, "Rijbewijscategorie", "A028210", "Vrachtauto_inc_aanhanger")
+```
+
+
+
+
+```{r eval=FALSE, echo=FALSE}
+
+if (!exists("gemeente_2024")) {
+  gemeente_2024 <- gemeente_2024 <- cbs_get_sf(region = "gemeente", year = "2024")
+}
+
+# Ensure there are no leading/trailing spaces in statcode
+data$RegioS <- str_trim(data$RegioS)
+
+# Join the map with the data
+map_with_data <- left_join(gemeente_2024, data, by = c("statcode" = "RegioS"))
+
+# Transform the CRS to WGS84
+map_with_data <- st_transform(map_with_data, crs = 4326)
+
+# Define a color palette for the interactive map
+pal <- colorNumeric(palette = "viridis", domain = map_with_data$PersonenMetPersoonlijkInkomen_2, na.color = "transparent")
+
+# Create an interactive map using leaflet
+leaflet(map_with_data) %>%
+  addTiles() %>%
+  addPolygons(
+    fillColor = ~pal(PersonenMetPersoonlijkInkomen_2),
+    weight = 1,
+    opacity = 1,
+    color = "white",
+    dashArray = "3",
+    fillOpacity = 0.7,
+    highlightOptions = highlightOptions(
+      weight = 3,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.7,
+      bringToFront = TRUE
+    ),
+    label = ~paste("Regio:", statnaam, "",
+                   "PersonenMetPersoonlijkInkomen_2:", PersonenMetPersoonlijkInkomen_2),
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "3px 8px"),
+      textsize = "15px",
+      direction = "auto"
+    )
+  ) %>%
+  addLegend(pal = pal, values = ~PersonenMetPersoonlijkInkomen_2, opacity = 0.7, title = "PersonenMetPersoonlijkInkomen_2",
+            position = "bottomright")
+
+```
+
+
+
+
+
