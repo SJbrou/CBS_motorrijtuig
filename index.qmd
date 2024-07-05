@@ -167,25 +167,37 @@ write.csv(data_rijbewijs, file = "Data/rijbewijs_leeftijd_PV.csv", row.names = F
 ```
 
 
-# Waar zijn de Wegvoertuigen? {.unnumbered}
+# In welke gemeente zijn de voertuigen?{.unnumbered}
+
+Totaal aantal voertuigen:
 ```{r echo=FALSE, message=FALSE}
 plotmap_GM(data_rijvoertuigen_GM, "TotaalWegvoertuigen_1")
 
 ```
 
-# % Prive / Zakelijk
+Personenauto's:
+```{r echo=FALSE, message=FALSE}
+plotmap_GM(data_rijvoertuigen_GM, "Personenauto_2")
+```
+### 
+
+Percentage prive voertuigen
 ```{r echo=FALSE, message=FALSE}
 data_rij <- data_rijvoertuigen_GM %>%
   select(all_of(c("RegioS", "Perioden", "TotaalWegvoertuigen_1", "Personenauto_2", "TotaalBedrijfsvoertuigen_3")))
 data_rij$P_Prive <- round(as.numeric(data_rij$Personenauto_2) / as.numeric(data_rij$TotaalWegvoertuigen_1) * 100,0)
 data_rij$P_Zakelijk <- round(as.numeric(data_rij$TotaalBedrijfsvoertuigen_3) / as.numeric(data_rij$TotaalWegvoertuigen_1) * 100,0)
 plotmap_GM(data_rij, "P_Prive")
+```
+Percentage zakelijke voertuigen
+```{r echo=FALSE, message=FALSE}
 plotmap_GM(data_rij, "P_Zakelijk")
 
 ```
 
 
-# Wie komt in aanmerking?
+# Demografische gegevens
+Personenen met eigen inkomen
 ```{r echo=FALSE, message=FALSE}
 
 data <- data_inkomen %>%
@@ -194,6 +206,9 @@ data$PersonenMetPersoonlijkInkomen_2 <- as.numeric(data$PersonenMetPersoonlijkIn
 data$GemiddeldGestandaardiseerdInkomen_4 <- as.numeric(data$GemiddeldGestandaardiseerdInkomen_4) * 1000
 
 plotmap_GM(data, "PersonenMetPersoonlijkInkomen_2")
+```
+Gemiddeld Gestandaardiseerd Inkomen
+```{r echo=FALSE, message=FALSE}
 plotmap_GM(data, "GemiddeldGestandaardiseerdInkomen_4")
 ```
 
@@ -220,7 +235,7 @@ plotmap_GM(data, "GemiddeldGestandaardiseerdInkomen_4")
 
 
 
-```{r message=FALSE, echo=FALSE}
+```{r message=FALSE, echo=FALSE, eval=FALSE}
 head(metadata)
 data_rijbewijs$Rijbewijscategorie <- str_trim(data_rijbewijs$Rijbewijscategorie)
 replace_value_in_column <- function(data, column, old_value, new_value) {
